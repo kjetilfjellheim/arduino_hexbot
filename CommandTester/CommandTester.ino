@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-#define MOTOR_CONTROL_BAUD 9600
+#define MOTOR_CONTROL_BAUD 1200
 #define MOTORCTRL_TX 11
 #define MOTORCTRL_RX 12
 

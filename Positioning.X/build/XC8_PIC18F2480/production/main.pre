@@ -14960,8 +14960,8 @@ char UART_Read();
 void UART_Write(char data);
 void UART_Write_String(const unsigned char *str);
 
-const unsigned char* SERVO0 = "#0P1500T3000\r";
-const unsigned char* SERVO1 = "#1P1900T3000\r";
+const unsigned char* SERVO0 = "#0P1500T1000\r";
+const unsigned char* SERVO1 = "#1P1300T1000\r";
 const unsigned char* SERVO2 = "#2P1800T3000\r";
 const unsigned char* SERVO4 = "#4P1400T3000\r";
 const unsigned char* SERVO5 = "#5P1600T3000\r";

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.44 build -154322312 
-                                                                                               Sun Oct 01 17:46:01 2017
+                                                                                               Sun Oct 01 23:40:11 2017
 
 Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140600
      1                           	processor	18F2480
@@ -116,35 +116,35 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    102  000355  3F                 	db	high STR_9
    103                           
    104                           ;initializer for _SERVO9
-   105  000356  C7                 	db	low STR_8
+   105  000356  D5                 	db	low STR_8
    106  000357  3F                 	db	high STR_8
    107                           
    108                           ;initializer for _SERVO8
-   109  000358  8F                 	db	low STR_7
+   109  000358  AB                 	db	low STR_7
    110  000359  3F                 	db	high STR_7
    111                           
    112                           ;initializer for _SERVO6
-   113  00035A  D5                 	db	low STR_6
+   113  00035A  E3                 	db	low STR_6
    114  00035B  3F                 	db	high STR_6
    115                           
    116                           ;initializer for _SERVO5
-   117  00035C  B9                 	db	low STR_5
+   117  00035C  C7                 	db	low STR_5
    118  00035D  3F                 	db	high STR_5
    119                           
    120                           ;initializer for _SERVO4
-   121  00035E  9D                 	db	low STR_4
+   121  00035E  B9                 	db	low STR_4
    122  00035F  3F                 	db	high STR_4
    123                           
    124                           ;initializer for _SERVO2
-   125  000360  E3                 	db	low STR_3
+   125  000360  F1                 	db	low STR_3
    126  000361  3F                 	db	high STR_3
    127                           
    128                           ;initializer for _SERVO1
-   129  000362  F1                 	db	low STR_2
+   129  000362  8F                 	db	low STR_2
    130  000363  3F                 	db	high STR_2
    131                           
    132                           ;initializer for _SERVO0
-   133  000364  AB                 	db	low STR_1
+   133  000364  9D                 	db	low STR_1
    134  000365  3F                 	db	high STR_1
    135  0000                     _OSCCONbits	set	4051
    136  0000                     _OSCTUNEbits	set	3995
@@ -321,42 +321,42 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    307  003F8C  30                 	db	48	;'0'
    308  003F8D  0D                 	db	13
    309  003F8E  00                 	db	0
-   310  003F8F                     STR_7:
+   310  003F8F                     STR_2:
    311  003F8F  23                 	db	35
-   312  003F90  38                 	db	56	;'8'
+   312  003F90  31                 	db	49	;'1'
    313  003F91  50                 	db	80	;'P'
    314  003F92  31                 	db	49	;'1'
-   315  003F93  30                 	db	48	;'0'
+   315  003F93  33                 	db	51	;'3'
    316  003F94  30                 	db	48	;'0'
    317  003F95  30                 	db	48	;'0'
    318  003F96  54                 	db	84	;'T'
-   319  003F97  33                 	db	51	;'3'
+   319  003F97  31                 	db	49	;'1'
    320  003F98  30                 	db	48	;'0'
    321  003F99  30                 	db	48	;'0'
    322  003F9A  30                 	db	48	;'0'
    323  003F9B  0D                 	db	13
    324  003F9C  00                 	db	0
-   325  003F9D                     STR_4:
+   325  003F9D                     STR_1:
    326  003F9D  23                 	db	35
-   327  003F9E  34                 	db	52	;'4'
+   327  003F9E  30                 	db	48	;'0'
    328  003F9F  50                 	db	80	;'P'
    329  003FA0  31                 	db	49	;'1'
-   330  003FA1  34                 	db	52	;'4'
+   330  003FA1  35                 	db	53	;'5'
    331  003FA2  30                 	db	48	;'0'
    332  003FA3  30                 	db	48	;'0'
    333  003FA4  54                 	db	84	;'T'
-   334  003FA5  33                 	db	51	;'3'
+   334  003FA5  31                 	db	49	;'1'
    335  003FA6  30                 	db	48	;'0'
    336  003FA7  30                 	db	48	;'0'
    337  003FA8  30                 	db	48	;'0'
    338  003FA9  0D                 	db	13
    339  003FAA  00                 	db	0
-   340  003FAB                     STR_1:
+   340  003FAB                     STR_7:
    341  003FAB  23                 	db	35
-   342  003FAC  30                 	db	48	;'0'
+   342  003FAC  38                 	db	56	;'8'
    343  003FAD  50                 	db	80	;'P'
    344  003FAE  31                 	db	49	;'1'
-   345  003FAF  35                 	db	53	;'5'
+   345  003FAF  30                 	db	48	;'0'
    346  003FB0  30                 	db	48	;'0'
    347  003FB1  30                 	db	48	;'0'
    348  003FB2  54                 	db	84	;'T'
@@ -366,12 +366,12 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    352  003FB6  30                 	db	48	;'0'
    353  003FB7  0D                 	db	13
    354  003FB8  00                 	db	0
-   355  003FB9                     STR_5:
+   355  003FB9                     STR_4:
    356  003FB9  23                 	db	35
-   357  003FBA  35                 	db	53	;'5'
+   357  003FBA  34                 	db	52	;'4'
    358  003FBB  50                 	db	80	;'P'
    359  003FBC  31                 	db	49	;'1'
-   360  003FBD  36                 	db	54	;'6'
+   360  003FBD  34                 	db	52	;'4'
    361  003FBE  30                 	db	48	;'0'
    362  003FBF  30                 	db	48	;'0'
    363  003FC0  54                 	db	84	;'T'
@@ -381,9 +381,9 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    367  003FC4  30                 	db	48	;'0'
    368  003FC5  0D                 	db	13
    369  003FC6  00                 	db	0
-   370  003FC7                     STR_8:
+   370  003FC7                     STR_5:
    371  003FC7  23                 	db	35
-   372  003FC8  39                 	db	57	;'9'
+   372  003FC8  35                 	db	53	;'5'
    373  003FC9  50                 	db	80	;'P'
    374  003FCA  31                 	db	49	;'1'
    375  003FCB  36                 	db	54	;'6'
@@ -396,12 +396,12 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    382  003FD2  30                 	db	48	;'0'
    383  003FD3  0D                 	db	13
    384  003FD4  00                 	db	0
-   385  003FD5                     STR_6:
+   385  003FD5                     STR_8:
    386  003FD5  23                 	db	35
-   387  003FD6  36                 	db	54	;'6'
+   387  003FD6  39                 	db	57	;'9'
    388  003FD7  50                 	db	80	;'P'
    389  003FD8  31                 	db	49	;'1'
-   390  003FD9  37                 	db	55	;'7'
+   390  003FD9  36                 	db	54	;'6'
    391  003FDA  30                 	db	48	;'0'
    392  003FDB  30                 	db	48	;'0'
    393  003FDC  54                 	db	84	;'T'
@@ -411,12 +411,12 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    397  003FE0  30                 	db	48	;'0'
    398  003FE1  0D                 	db	13
    399  003FE2  00                 	db	0
-   400  003FE3                     STR_3:
+   400  003FE3                     STR_6:
    401  003FE3  23                 	db	35
-   402  003FE4  32                 	db	50	;'2'
+   402  003FE4  36                 	db	54	;'6'
    403  003FE5  50                 	db	80	;'P'
    404  003FE6  31                 	db	49	;'1'
-   405  003FE7  38                 	db	56	;'8'
+   405  003FE7  37                 	db	55	;'7'
    406  003FE8  30                 	db	48	;'0'
    407  003FE9  30                 	db	48	;'0'
    408  003FEA  54                 	db	84	;'T'
@@ -426,12 +426,12 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    412  003FEE  30                 	db	48	;'0'
    413  003FEF  0D                 	db	13
    414  003FF0  00                 	db	0
-   415  003FF1                     STR_2:
+   415  003FF1                     STR_3:
    416  003FF1  23                 	db	35
-   417  003FF2  31                 	db	49	;'1'
+   417  003FF2  32                 	db	50	;'2'
    418  003FF3  50                 	db	80	;'P'
    419  003FF4  31                 	db	49	;'1'
-   420  003FF5  39                 	db	57	;'9'
+   420  003FF5  38                 	db	56	;'8'
    421  003FF6  30                 	db	48	;'0'
    422  003FF7  30                 	db	48	;'0'
    423  003FF8  54                 	db	84	;'T'
@@ -674,7 +674,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    660  0000CA  ECB3  F001         	call	_ConfigureOscillator	;wreg free
    661                           
    662                           ;main.c: 56: InitApp();
-   663  0000CE  ECCB  F001         	call	_InitApp	;wreg free
+   663  0000CE  ECC7  F001         	call	_InitApp	;wreg free
    664                           
    665                           ;main.c: 58: UART_Init();
    666  0000D2  EC71  F001         	call	_UART_Init	;wreg free
@@ -869,7 +869,7 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
    855                           ; BSR set to: 0
    856                           ;main.c: 107: UART_Write(a);
    857  000286  516C               	movf	UART_Write_String@a& (0+255),w,b
-   858  000288  ECC4  F001         	call	_UART_Write
+   858  000288  ECC0  F001         	call	_UART_Write
    859  00028C                     l92:
    860  00028C  0100               	movlb	0	; () banked
    861  00028E  4B6D               	infsnz	UART_Write_String@i& (0+255),f,b
@@ -1021,25 +1021,25 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1007 ;;
   1008                           
   1009                           	psect	text3
-  1010  000388                     __ptext3:
+  1010  000380                     __ptext3:
   1011                           	opt stack 0
-  1012  000388                     _UART_Write:
+  1012  000380                     _UART_Write:
   1013                           	opt stack 27
   1014                           
   1015                           ; BSR set to: 0
   1016                           ;incstack = 0
   1017                           ;UART_Write@data stored from wreg
-  1018  000388  0100               	movlb	0	; () banked
-  1019  00038A  6F60               	movwf	UART_Write@data& (0+255),b
-  1020  00038C                     
+  1018  000380  0100               	movlb	0	; () banked
+  1019  000382  6F60               	movwf	UART_Write@data& (0+255),b
+  1020  000384                     
   1021                           ;main.c: 113: while(!TRMT);
-  1022  00038C  A2AC               	btfss	4012,1,c	;volatile
-  1023  00038E  D7FE               	goto	l906
+  1022  000384  A2AC               	btfss	4012,1,c	;volatile
+  1023  000386  D7FE               	goto	l906
   1024                           
   1025                           ;main.c: 114: TXREG = data;
-  1026  000390  C060  FFAD         	movff	UART_Write@data,4013	;volatile
-  1027  000394  0012               	return		;funcret
-  1028  000396                     __end_of_UART_Write:
+  1026  000388  C060  FFAD         	movff	UART_Write@data,4013	;volatile
+  1027  00038C  0012               	return		;funcret
+  1028  00038E                     __end_of_UART_Write:
   1029                           	opt stack 0
   1030                           tblptru	equ	0xFF8
   1031                           tblptrh	equ	0xFF7
@@ -1176,14 +1176,14 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1162 ;;
   1163                           
   1164                           	psect	text5
-  1165  000396                     __ptext5:
+  1165  00038E                     __ptext5:
   1166                           	opt stack 0
-  1167  000396                     _InitApp:
+  1167  00038E                     _InitApp:
   1168                           	opt stack 28
   1169                           
   1170                           ;incstack = 0
-  1171  000396  0012               	return		;funcret
-  1172  000398                     __end_of_InitApp:
+  1171  00038E  0012               	return		;funcret
+  1172  000390                     __end_of_InitApp:
   1173                           	opt stack 0
   1174                           tblptru	equ	0xFF8
   1175                           tblptrh	equ	0xFF7
@@ -1254,318 +1254,312 @@ Microchip Technology Omniscient Code Generator v1.44 (Free mode) build 201709140
   1240  000378  0B8F               	andlw	-113
   1241  00037A  0950               	iorlw	80
   1242  00037C  6ED3               	movwf	4051,c	;volatile
-  1243                           
-  1244                           ;system.c: 30: OSCCONbits.SCS = 0b10;
-  1245  00037E  50D3               	movf	4051,w,c	;volatile
-  1246  000380  0BFC               	andlw	-4
-  1247  000382  0902               	iorlw	2
-  1248  000384  6ED3               	movwf	4051,c	;volatile
-  1249  000386  0012               	return		;funcret
-  1250  000388                     __end_of_ConfigureOscillator:
-  1251                           	opt stack 0
-  1252                           tblptru	equ	0xFF8
-  1253                           tblptrh	equ	0xFF7
-  1254                           tblptrl	equ	0xFF6
-  1255                           tablat	equ	0xFF5
-  1256                           postinc0	equ	0xFEE
-  1257                           wreg	equ	0xFE8
-  1258                           postdec1	equ	0xFE5
-  1259                           fsr1l	equ	0xFE1
-  1260                           status	equ	0xFD8
-  1261                           
-  1262 ;; *************** function _low_isr *****************
-  1263 ;; Defined at:
-  1264 ;;		line 67 in file "interrupts.c"
-  1265 ;; Parameters:    Size  Location     Type
+  1243  00037E  0012               	return		;funcret
+  1244  000380                     __end_of_ConfigureOscillator:
+  1245                           	opt stack 0
+  1246                           tblptru	equ	0xFF8
+  1247                           tblptrh	equ	0xFF7
+  1248                           tblptrl	equ	0xFF6
+  1249                           tablat	equ	0xFF5
+  1250                           postinc0	equ	0xFEE
+  1251                           wreg	equ	0xFE8
+  1252                           postdec1	equ	0xFE5
+  1253                           fsr1l	equ	0xFE1
+  1254                           status	equ	0xFD8
+  1255                           
+  1256 ;; *************** function _low_isr *****************
+  1257 ;; Defined at:
+  1258 ;;		line 67 in file "interrupts.c"
+  1259 ;; Parameters:    Size  Location     Type
+  1260 ;;		None
+  1261 ;; Auto vars:     Size  Location     Type
+  1262 ;;		None
+  1263 ;; Return value:  Size  Location     Type
+  1264 ;;                  1    wreg      void 
+  1265 ;; Registers used:
   1266 ;;		None
-  1267 ;; Auto vars:     Size  Location     Type
-  1268 ;;		None
-  1269 ;; Return value:  Size  Location     Type
-  1270 ;;                  1    wreg      void 
-  1271 ;; Registers used:
-  1272 ;;		None
-  1273 ;; Tracked objects:
-  1274 ;;		On entry : 0/0
-  1275 ;;		On exit  : 0/0
-  1276 ;;		Unchanged: 0/0
-  1277 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
-  1278 ;;      Params:         0       0       0       0
-  1279 ;;      Locals:         0       0       0       0
-  1280 ;;      Temps:         21       0       0       0
-  1281 ;;      Totals:        21       0       0       0
-  1282 ;;Total ram usage:       21 bytes
-  1283 ;; Hardware stack levels used:    1
-  1284 ;; Hardware stack levels required when called:    1
-  1285 ;; This function calls:
-  1286 ;;		Nothing
-  1287 ;; This function is called by:
-  1288 ;;		Interrupt level 1
-  1289 ;; This function uses a non-reentrant model
-  1290 ;;
+  1267 ;; Tracked objects:
+  1268 ;;		On entry : 0/0
+  1269 ;;		On exit  : 0/0
+  1270 ;;		Unchanged: 0/0
+  1271 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+  1272 ;;      Params:         0       0       0       0
+  1273 ;;      Locals:         0       0       0       0
+  1274 ;;      Temps:         21       0       0       0
+  1275 ;;      Totals:        21       0       0       0
+  1276 ;;Total ram usage:       21 bytes
+  1277 ;; Hardware stack levels used:    1
+  1278 ;; Hardware stack levels required when called:    1
+  1279 ;; This function calls:
+  1280 ;;		Nothing
+  1281 ;; This function is called by:
+  1282 ;;		Interrupt level 1
+  1283 ;; This function uses a non-reentrant model
+  1284 ;;
+  1285                           
+  1286                           	psect	intcodelo
+  1287  000018                     __pintcodelo:
+  1288                           	opt stack 0
+  1289  000018                     _low_isr:
+  1290                           	opt stack 27
   1291                           
-  1292                           	psect	intcodelo
-  1293  000018                     __pintcodelo:
-  1294                           	opt stack 0
-  1295  000018                     _low_isr:
-  1296                           	opt stack 27
-  1297                           
-  1298                           ;incstack = 0
-  1299  000018  804C               	bsf	btemp,0,c	;set compiler interrupt flag (level 1)
-  1300  00001A  CFD8 F013          	movff	status,??_low_isr
-  1301  00001E  CFE8 F014          	movff	wreg,??_low_isr+1
-  1302  000022  CFE0 F015          	movff	bsr,??_low_isr+2
-  1303  000026  CFFA F016          	movff	pclath,??_low_isr+3
-  1304  00002A  CFFB F017          	movff	pclatu,??_low_isr+4
-  1305  00002E  CFE9 F018          	movff	fsr0l,??_low_isr+5
-  1306  000032  CFEA F019          	movff	fsr0h,??_low_isr+6
-  1307  000036  CFE1 F01A          	movff	fsr1l,??_low_isr+7
-  1308  00003A  CFE2 F01B          	movff	fsr1h,??_low_isr+8
-  1309  00003E  CFD9 F01C          	movff	fsr2l,??_low_isr+9
-  1310  000042  CFDA F01D          	movff	fsr2h,??_low_isr+10
-  1311  000046  CFF3 F01E          	movff	prodl,??_low_isr+11
-  1312  00004A  CFF4 F01F          	movff	prodh,??_low_isr+12
-  1313  00004E  CFF6 F020          	movff	tblptrl,??_low_isr+13
-  1314  000052  CFF7 F021          	movff	tblptrh,??_low_isr+14
-  1315  000056  CFF8 F022          	movff	tblptru,??_low_isr+15
-  1316  00005A  CFF5 F023          	movff	tablat,??_low_isr+16
-  1317  00005E  C04C  F024         	movff	btemp,??_low_isr+17
-  1318  000062  C04D  F025         	movff	btemp+1,??_low_isr+18
-  1319  000066  C04E  F026         	movff	btemp+2,??_low_isr+19
-  1320  00006A  C04F  F027         	movff	btemp+3,??_low_isr+20
-  1321  00006E  C027  F04F         	movff	??_low_isr+20,btemp+3
-  1322  000072  C026  F04E         	movff	??_low_isr+19,btemp+2
-  1323  000076  C025  F04D         	movff	??_low_isr+18,btemp+1
-  1324  00007A  C024  F04C         	movff	??_low_isr+17,btemp
-  1325  00007E  C023  FFF5         	movff	??_low_isr+16,tablat
-  1326  000082  C022  FFF8         	movff	??_low_isr+15,tblptru
-  1327  000086  C021  FFF7         	movff	??_low_isr+14,tblptrh
-  1328  00008A  C020  FFF6         	movff	??_low_isr+13,tblptrl
-  1329  00008E  C01F  FFF4         	movff	??_low_isr+12,prodh
-  1330  000092  C01E  FFF3         	movff	??_low_isr+11,prodl
-  1331  000096  C01D  FFDA         	movff	??_low_isr+10,fsr2h
-  1332  00009A  C01C  FFD9         	movff	??_low_isr+9,fsr2l
-  1333  00009E  C01B  FFE2         	movff	??_low_isr+8,fsr1h
-  1334  0000A2  C01A  FFE1         	movff	??_low_isr+7,fsr1l
-  1335  0000A6  C019  FFEA         	movff	??_low_isr+6,fsr0h
-  1336  0000AA  C018  FFE9         	movff	??_low_isr+5,fsr0l
-  1337  0000AE  C017  FFFB         	movff	??_low_isr+4,pclatu
-  1338  0000B2  C016  FFFA         	movff	??_low_isr+3,pclath
-  1339  0000B6  C015  FFE0         	movff	??_low_isr+2,bsr
-  1340  0000BA  C014  FFE8         	movff	??_low_isr+1,wreg
-  1341  0000BE  C013  FFD8         	movff	??_low_isr,status
-  1342  0000C2  904C               	bcf	btemp,0,c	;clear compiler interrupt flag (level 1)
-  1343  0000C4  0010               	retfie	
-  1344  0000C6                     __end_of_low_isr:
-  1345                           	opt stack 0
-  1346                           pclatu	equ	0xFFB
-  1347                           pclath	equ	0xFFA
-  1348                           tblptru	equ	0xFF8
-  1349                           tblptrh	equ	0xFF7
-  1350                           tblptrl	equ	0xFF6
-  1351                           tablat	equ	0xFF5
-  1352                           prodh	equ	0xFF4
-  1353                           prodl	equ	0xFF3
-  1354                           postinc0	equ	0xFEE
-  1355                           fsr0h	equ	0xFEA
-  1356                           fsr0l	equ	0xFE9
-  1357                           wreg	equ	0xFE8
-  1358                           postdec1	equ	0xFE5
-  1359                           fsr1h	equ	0xFE2
-  1360                           fsr1l	equ	0xFE1
-  1361                           bsr	equ	0xFE0
-  1362                           fsr2h	equ	0xFDA
-  1363                           fsr2l	equ	0xFD9
-  1364                           status	equ	0xFD8
-  1365                           
-  1366 ;; *************** function _high_isr *****************
-  1367 ;; Defined at:
-  1368 ;;		line 27 in file "interrupts.c"
-  1369 ;; Parameters:    Size  Location     Type
+  1292                           ;incstack = 0
+  1293  000018  804C               	bsf	btemp,0,c	;set compiler interrupt flag (level 1)
+  1294  00001A  CFD8 F013          	movff	status,??_low_isr
+  1295  00001E  CFE8 F014          	movff	wreg,??_low_isr+1
+  1296  000022  CFE0 F015          	movff	bsr,??_low_isr+2
+  1297  000026  CFFA F016          	movff	pclath,??_low_isr+3
+  1298  00002A  CFFB F017          	movff	pclatu,??_low_isr+4
+  1299  00002E  CFE9 F018          	movff	fsr0l,??_low_isr+5
+  1300  000032  CFEA F019          	movff	fsr0h,??_low_isr+6
+  1301  000036  CFE1 F01A          	movff	fsr1l,??_low_isr+7
+  1302  00003A  CFE2 F01B          	movff	fsr1h,??_low_isr+8
+  1303  00003E  CFD9 F01C          	movff	fsr2l,??_low_isr+9
+  1304  000042  CFDA F01D          	movff	fsr2h,??_low_isr+10
+  1305  000046  CFF3 F01E          	movff	prodl,??_low_isr+11
+  1306  00004A  CFF4 F01F          	movff	prodh,??_low_isr+12
+  1307  00004E  CFF6 F020          	movff	tblptrl,??_low_isr+13
+  1308  000052  CFF7 F021          	movff	tblptrh,??_low_isr+14
+  1309  000056  CFF8 F022          	movff	tblptru,??_low_isr+15
+  1310  00005A  CFF5 F023          	movff	tablat,??_low_isr+16
+  1311  00005E  C04C  F024         	movff	btemp,??_low_isr+17
+  1312  000062  C04D  F025         	movff	btemp+1,??_low_isr+18
+  1313  000066  C04E  F026         	movff	btemp+2,??_low_isr+19
+  1314  00006A  C04F  F027         	movff	btemp+3,??_low_isr+20
+  1315  00006E  C027  F04F         	movff	??_low_isr+20,btemp+3
+  1316  000072  C026  F04E         	movff	??_low_isr+19,btemp+2
+  1317  000076  C025  F04D         	movff	??_low_isr+18,btemp+1
+  1318  00007A  C024  F04C         	movff	??_low_isr+17,btemp
+  1319  00007E  C023  FFF5         	movff	??_low_isr+16,tablat
+  1320  000082  C022  FFF8         	movff	??_low_isr+15,tblptru
+  1321  000086  C021  FFF7         	movff	??_low_isr+14,tblptrh
+  1322  00008A  C020  FFF6         	movff	??_low_isr+13,tblptrl
+  1323  00008E  C01F  FFF4         	movff	??_low_isr+12,prodh
+  1324  000092  C01E  FFF3         	movff	??_low_isr+11,prodl
+  1325  000096  C01D  FFDA         	movff	??_low_isr+10,fsr2h
+  1326  00009A  C01C  FFD9         	movff	??_low_isr+9,fsr2l
+  1327  00009E  C01B  FFE2         	movff	??_low_isr+8,fsr1h
+  1328  0000A2  C01A  FFE1         	movff	??_low_isr+7,fsr1l
+  1329  0000A6  C019  FFEA         	movff	??_low_isr+6,fsr0h
+  1330  0000AA  C018  FFE9         	movff	??_low_isr+5,fsr0l
+  1331  0000AE  C017  FFFB         	movff	??_low_isr+4,pclatu
+  1332  0000B2  C016  FFFA         	movff	??_low_isr+3,pclath
+  1333  0000B6  C015  FFE0         	movff	??_low_isr+2,bsr
+  1334  0000BA  C014  FFE8         	movff	??_low_isr+1,wreg
+  1335  0000BE  C013  FFD8         	movff	??_low_isr,status
+  1336  0000C2  904C               	bcf	btemp,0,c	;clear compiler interrupt flag (level 1)
+  1337  0000C4  0010               	retfie	
+  1338  0000C6                     __end_of_low_isr:
+  1339                           	opt stack 0
+  1340                           pclatu	equ	0xFFB
+  1341                           pclath	equ	0xFFA
+  1342                           tblptru	equ	0xFF8
+  1343                           tblptrh	equ	0xFF7
+  1344                           tblptrl	equ	0xFF6
+  1345                           tablat	equ	0xFF5
+  1346                           prodh	equ	0xFF4
+  1347                           prodl	equ	0xFF3
+  1348                           postinc0	equ	0xFEE
+  1349                           fsr0h	equ	0xFEA
+  1350                           fsr0l	equ	0xFE9
+  1351                           wreg	equ	0xFE8
+  1352                           postdec1	equ	0xFE5
+  1353                           fsr1h	equ	0xFE2
+  1354                           fsr1l	equ	0xFE1
+  1355                           bsr	equ	0xFE0
+  1356                           fsr2h	equ	0xFDA
+  1357                           fsr2l	equ	0xFD9
+  1358                           status	equ	0xFD8
+  1359                           
+  1360 ;; *************** function _high_isr *****************
+  1361 ;; Defined at:
+  1362 ;;		line 27 in file "interrupts.c"
+  1363 ;; Parameters:    Size  Location     Type
+  1364 ;;		None
+  1365 ;; Auto vars:     Size  Location     Type
+  1366 ;;		None
+  1367 ;; Return value:  Size  Location     Type
+  1368 ;;                  1    wreg      void 
+  1369 ;; Registers used:
   1370 ;;		None
-  1371 ;; Auto vars:     Size  Location     Type
-  1372 ;;		None
-  1373 ;; Return value:  Size  Location     Type
-  1374 ;;                  1    wreg      void 
-  1375 ;; Registers used:
-  1376 ;;		None
-  1377 ;; Tracked objects:
-  1378 ;;		On entry : 0/0
-  1379 ;;		On exit  : 0/0
-  1380 ;;		Unchanged: 0/0
-  1381 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
-  1382 ;;      Params:         0       0       0       0
-  1383 ;;      Locals:         0       0       0       0
-  1384 ;;      Temps:         18       0       0       0
-  1385 ;;      Totals:        18       0       0       0
-  1386 ;;Total ram usage:       18 bytes
-  1387 ;; Hardware stack levels used:    1
-  1388 ;; This function calls:
-  1389 ;;		Nothing
-  1390 ;; This function is called by:
-  1391 ;;		Interrupt level 2
-  1392 ;; This function uses a non-reentrant model
-  1393 ;;
+  1371 ;; Tracked objects:
+  1372 ;;		On entry : 0/0
+  1373 ;;		On exit  : 0/0
+  1374 ;;		Unchanged: 0/0
+  1375 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2
+  1376 ;;      Params:         0       0       0       0
+  1377 ;;      Locals:         0       0       0       0
+  1378 ;;      Temps:         18       0       0       0
+  1379 ;;      Totals:        18       0       0       0
+  1380 ;;Total ram usage:       18 bytes
+  1381 ;; Hardware stack levels used:    1
+  1382 ;; This function calls:
+  1383 ;;		Nothing
+  1384 ;; This function is called by:
+  1385 ;;		Interrupt level 2
+  1386 ;; This function uses a non-reentrant model
+  1387 ;;
+  1388                           
+  1389                           	psect	intcode
+  1390  000008                     __pintcode:
+  1391                           	opt stack 0
+  1392  000008                     _high_isr:
+  1393                           	opt stack 27
   1394                           
-  1395                           	psect	intcode
-  1396  000008                     __pintcode:
-  1397                           	opt stack 0
-  1398  000008                     _high_isr:
-  1399                           	opt stack 27
-  1400                           
-  1401                           ;incstack = 0
-  1402  000008  824C               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
-  1403  00000A  EDD8  F000         	call	int_func,f	;refresh shadow registers
-  1404                           pclatu	equ	0xFFB
-  1405                           pclath	equ	0xFFA
-  1406                           tblptru	equ	0xFF8
-  1407                           tblptrh	equ	0xFF7
-  1408                           tblptrl	equ	0xFF6
-  1409                           tablat	equ	0xFF5
-  1410                           prodh	equ	0xFF4
-  1411                           prodl	equ	0xFF3
-  1412                           postinc0	equ	0xFEE
-  1413                           fsr0h	equ	0xFEA
-  1414                           fsr0l	equ	0xFE9
-  1415                           wreg	equ	0xFE8
-  1416                           postdec1	equ	0xFE5
-  1417                           fsr1h	equ	0xFE2
-  1418                           fsr1l	equ	0xFE1
-  1419                           bsr	equ	0xFE0
-  1420                           fsr2h	equ	0xFDA
-  1421                           fsr2l	equ	0xFD9
-  1422                           status	equ	0xFD8
-  1423                           
-  1424                           	psect	intcode_body
-  1425  0001B0                     __pintcode_body:
-  1426                           	opt stack 27
-  1427  0001B0                     int_func:
-  1428                           	opt stack 27
-  1429  0001B0  0006               	pop		; remove dummy address from shadow register refresh
-  1430  0001B2  CFFA F001          	movff	pclath,??_high_isr
-  1431  0001B6  CFFB F002          	movff	pclatu,??_high_isr+1
-  1432  0001BA  CFE9 F003          	movff	fsr0l,??_high_isr+2
-  1433  0001BE  CFEA F004          	movff	fsr0h,??_high_isr+3
-  1434  0001C2  CFE1 F005          	movff	fsr1l,??_high_isr+4
-  1435  0001C6  CFE2 F006          	movff	fsr1h,??_high_isr+5
-  1436  0001CA  CFD9 F007          	movff	fsr2l,??_high_isr+6
-  1437  0001CE  CFDA F008          	movff	fsr2h,??_high_isr+7
-  1438  0001D2  CFF3 F009          	movff	prodl,??_high_isr+8
-  1439  0001D6  CFF4 F00A          	movff	prodh,??_high_isr+9
-  1440  0001DA  CFF6 F00B          	movff	tblptrl,??_high_isr+10
-  1441  0001DE  CFF7 F00C          	movff	tblptrh,??_high_isr+11
-  1442  0001E2  CFF8 F00D          	movff	tblptru,??_high_isr+12
-  1443  0001E6  CFF5 F00E          	movff	tablat,??_high_isr+13
-  1444  0001EA  C04C  F00F         	movff	btemp,??_high_isr+14
-  1445  0001EE  C04D  F010         	movff	btemp+1,??_high_isr+15
-  1446  0001F2  C04E  F011         	movff	btemp+2,??_high_isr+16
-  1447  0001F6  C04F  F012         	movff	btemp+3,??_high_isr+17
-  1448  0001FA  C012  F04F         	movff	??_high_isr+17,btemp+3
-  1449  0001FE  C011  F04E         	movff	??_high_isr+16,btemp+2
-  1450  000202  C010  F04D         	movff	??_high_isr+15,btemp+1
-  1451  000206  C00F  F04C         	movff	??_high_isr+14,btemp
-  1452  00020A  C00E  FFF5         	movff	??_high_isr+13,tablat
-  1453  00020E  C00D  FFF8         	movff	??_high_isr+12,tblptru
-  1454  000212  C00C  FFF7         	movff	??_high_isr+11,tblptrh
-  1455  000216  C00B  FFF6         	movff	??_high_isr+10,tblptrl
-  1456  00021A  C00A  FFF4         	movff	??_high_isr+9,prodh
-  1457  00021E  C009  FFF3         	movff	??_high_isr+8,prodl
-  1458  000222  C008  FFDA         	movff	??_high_isr+7,fsr2h
-  1459  000226  C007  FFD9         	movff	??_high_isr+6,fsr2l
-  1460  00022A  C006  FFE2         	movff	??_high_isr+5,fsr1h
-  1461  00022E  C005  FFE1         	movff	??_high_isr+4,fsr1l
-  1462  000232  C004  FFEA         	movff	??_high_isr+3,fsr0h
-  1463  000236  C003  FFE9         	movff	??_high_isr+2,fsr0l
-  1464  00023A  C002  FFFB         	movff	??_high_isr+1,pclatu
-  1465  00023E  C001  FFFA         	movff	??_high_isr,pclath
-  1466  000242  924C               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
-  1467  000244  0011               	retfie		f
-  1468  000246                     __end_of_high_isr:
-  1469                           	opt stack 0
-  1470                           pclatu	equ	0xFFB
-  1471                           pclath	equ	0xFFA
-  1472                           tblptru	equ	0xFF8
-  1473                           tblptrh	equ	0xFF7
-  1474                           tblptrl	equ	0xFF6
-  1475                           tablat	equ	0xFF5
-  1476                           prodh	equ	0xFF4
-  1477                           prodl	equ	0xFF3
-  1478                           postinc0	equ	0xFEE
-  1479                           fsr0h	equ	0xFEA
-  1480                           fsr0l	equ	0xFE9
-  1481                           wreg	equ	0xFE8
-  1482                           postdec1	equ	0xFE5
-  1483                           fsr1h	equ	0xFE2
-  1484                           fsr1l	equ	0xFE1
-  1485                           bsr	equ	0xFE0
-  1486                           fsr2h	equ	0xFDA
-  1487                           fsr2l	equ	0xFD9
-  1488                           status	equ	0xFD8
-  1489                           pclatu	equ	0xFFB
-  1490                           pclath	equ	0xFFA
-  1491                           tblptru	equ	0xFF8
-  1492                           tblptrh	equ	0xFF7
-  1493                           tblptrl	equ	0xFF6
-  1494                           tablat	equ	0xFF5
-  1495                           prodh	equ	0xFF4
-  1496                           prodl	equ	0xFF3
-  1497                           postinc0	equ	0xFEE
-  1498                           fsr0h	equ	0xFEA
-  1499                           fsr0l	equ	0xFE9
-  1500                           wreg	equ	0xFE8
-  1501                           postdec1	equ	0xFE5
-  1502                           fsr1h	equ	0xFE2
-  1503                           fsr1l	equ	0xFE1
-  1504                           bsr	equ	0xFE0
-  1505                           fsr2h	equ	0xFDA
-  1506                           fsr2l	equ	0xFD9
-  1507                           status	equ	0xFD8
-  1508                           
-  1509                           	psect	rparam
-  1510  0000                     pclatu	equ	0xFFB
-  1511                           pclath	equ	0xFFA
-  1512                           tblptru	equ	0xFF8
-  1513                           tblptrh	equ	0xFF7
-  1514                           tblptrl	equ	0xFF6
-  1515                           tablat	equ	0xFF5
-  1516                           prodh	equ	0xFF4
-  1517                           prodl	equ	0xFF3
-  1518                           postinc0	equ	0xFEE
-  1519                           fsr0h	equ	0xFEA
-  1520                           fsr0l	equ	0xFE9
-  1521                           wreg	equ	0xFE8
-  1522                           postdec1	equ	0xFE5
-  1523                           fsr1h	equ	0xFE2
-  1524                           fsr1l	equ	0xFE1
-  1525                           bsr	equ	0xFE0
-  1526                           fsr2h	equ	0xFDA
-  1527                           fsr2l	equ	0xFD9
-  1528                           status	equ	0xFD8
-  1529                           
-  1530                           	psect	temp
-  1531  00004C                     btemp:
-  1532                           	opt stack 0
-  1533  00004C                     	ds	1
-  1534  0000                     int$flags	set	btemp
-  1535  0000                     wtemp6	set	btemp+1
-  1536                           pclatu	equ	0xFFB
-  1537                           pclath	equ	0xFFA
-  1538                           tblptru	equ	0xFF8
-  1539                           tblptrh	equ	0xFF7
-  1540                           tblptrl	equ	0xFF6
-  1541                           tablat	equ	0xFF5
-  1542                           prodh	equ	0xFF4
-  1543                           prodl	equ	0xFF3
-  1544                           postinc0	equ	0xFEE
-  1545                           fsr0h	equ	0xFEA
-  1546                           fsr0l	equ	0xFE9
-  1547                           wreg	equ	0xFE8
-  1548                           postdec1	equ	0xFE5
-  1549                           fsr1h	equ	0xFE2
-  1550                           fsr1l	equ	0xFE1
-  1551                           bsr	equ	0xFE0
-  1552                           fsr2h	equ	0xFDA
-  1553                           fsr2l	equ	0xFD9
-  1554                           status	equ	0xFD8
+  1395                           ;incstack = 0
+  1396  000008  824C               	bsf	btemp,1,c	;set compiler interrupt flag (level 2)
+  1397  00000A  EDD8  F000         	call	int_func,f	;refresh shadow registers
+  1398                           pclatu	equ	0xFFB
+  1399                           pclath	equ	0xFFA
+  1400                           tblptru	equ	0xFF8
+  1401                           tblptrh	equ	0xFF7
+  1402                           tblptrl	equ	0xFF6
+  1403                           tablat	equ	0xFF5
+  1404                           prodh	equ	0xFF4
+  1405                           prodl	equ	0xFF3
+  1406                           postinc0	equ	0xFEE
+  1407                           fsr0h	equ	0xFEA
+  1408                           fsr0l	equ	0xFE9
+  1409                           wreg	equ	0xFE8
+  1410                           postdec1	equ	0xFE5
+  1411                           fsr1h	equ	0xFE2
+  1412                           fsr1l	equ	0xFE1
+  1413                           bsr	equ	0xFE0
+  1414                           fsr2h	equ	0xFDA
+  1415                           fsr2l	equ	0xFD9
+  1416                           status	equ	0xFD8
+  1417                           
+  1418                           	psect	intcode_body
+  1419  0001B0                     __pintcode_body:
+  1420                           	opt stack 27
+  1421  0001B0                     int_func:
+  1422                           	opt stack 27
+  1423  0001B0  0006               	pop		; remove dummy address from shadow register refresh
+  1424  0001B2  CFFA F001          	movff	pclath,??_high_isr
+  1425  0001B6  CFFB F002          	movff	pclatu,??_high_isr+1
+  1426  0001BA  CFE9 F003          	movff	fsr0l,??_high_isr+2
+  1427  0001BE  CFEA F004          	movff	fsr0h,??_high_isr+3
+  1428  0001C2  CFE1 F005          	movff	fsr1l,??_high_isr+4
+  1429  0001C6  CFE2 F006          	movff	fsr1h,??_high_isr+5
+  1430  0001CA  CFD9 F007          	movff	fsr2l,??_high_isr+6
+  1431  0001CE  CFDA F008          	movff	fsr2h,??_high_isr+7
+  1432  0001D2  CFF3 F009          	movff	prodl,??_high_isr+8
+  1433  0001D6  CFF4 F00A          	movff	prodh,??_high_isr+9
+  1434  0001DA  CFF6 F00B          	movff	tblptrl,??_high_isr+10
+  1435  0001DE  CFF7 F00C          	movff	tblptrh,??_high_isr+11
+  1436  0001E2  CFF8 F00D          	movff	tblptru,??_high_isr+12
+  1437  0001E6  CFF5 F00E          	movff	tablat,??_high_isr+13
+  1438  0001EA  C04C  F00F         	movff	btemp,??_high_isr+14
+  1439  0001EE  C04D  F010         	movff	btemp+1,??_high_isr+15
+  1440  0001F2  C04E  F011         	movff	btemp+2,??_high_isr+16
+  1441  0001F6  C04F  F012         	movff	btemp+3,??_high_isr+17
+  1442  0001FA  C012  F04F         	movff	??_high_isr+17,btemp+3
+  1443  0001FE  C011  F04E         	movff	??_high_isr+16,btemp+2
+  1444  000202  C010  F04D         	movff	??_high_isr+15,btemp+1
+  1445  000206  C00F  F04C         	movff	??_high_isr+14,btemp
+  1446  00020A  C00E  FFF5         	movff	??_high_isr+13,tablat
+  1447  00020E  C00D  FFF8         	movff	??_high_isr+12,tblptru
+  1448  000212  C00C  FFF7         	movff	??_high_isr+11,tblptrh
+  1449  000216  C00B  FFF6         	movff	??_high_isr+10,tblptrl
+  1450  00021A  C00A  FFF4         	movff	??_high_isr+9,prodh
+  1451  00021E  C009  FFF3         	movff	??_high_isr+8,prodl
+  1452  000222  C008  FFDA         	movff	??_high_isr+7,fsr2h
+  1453  000226  C007  FFD9         	movff	??_high_isr+6,fsr2l
+  1454  00022A  C006  FFE2         	movff	??_high_isr+5,fsr1h
+  1455  00022E  C005  FFE1         	movff	??_high_isr+4,fsr1l
+  1456  000232  C004  FFEA         	movff	??_high_isr+3,fsr0h
+  1457  000236  C003  FFE9         	movff	??_high_isr+2,fsr0l
+  1458  00023A  C002  FFFB         	movff	??_high_isr+1,pclatu
+  1459  00023E  C001  FFFA         	movff	??_high_isr,pclath
+  1460  000242  924C               	bcf	btemp,1,c	;clear compiler interrupt flag (level 2)
+  1461  000244  0011               	retfie		f
+  1462  000246                     __end_of_high_isr:
+  1463                           	opt stack 0
+  1464                           pclatu	equ	0xFFB
+  1465                           pclath	equ	0xFFA
+  1466                           tblptru	equ	0xFF8
+  1467                           tblptrh	equ	0xFF7
+  1468                           tblptrl	equ	0xFF6
+  1469                           tablat	equ	0xFF5
+  1470                           prodh	equ	0xFF4
+  1471                           prodl	equ	0xFF3
+  1472                           postinc0	equ	0xFEE
+  1473                           fsr0h	equ	0xFEA
+  1474                           fsr0l	equ	0xFE9
+  1475                           wreg	equ	0xFE8
+  1476                           postdec1	equ	0xFE5
+  1477                           fsr1h	equ	0xFE2
+  1478                           fsr1l	equ	0xFE1
+  1479                           bsr	equ	0xFE0
+  1480                           fsr2h	equ	0xFDA
+  1481                           fsr2l	equ	0xFD9
+  1482                           status	equ	0xFD8
+  1483                           pclatu	equ	0xFFB
+  1484                           pclath	equ	0xFFA
+  1485                           tblptru	equ	0xFF8
+  1486                           tblptrh	equ	0xFF7
+  1487                           tblptrl	equ	0xFF6
+  1488                           tablat	equ	0xFF5
+  1489                           prodh	equ	0xFF4
+  1490                           prodl	equ	0xFF3
+  1491                           postinc0	equ	0xFEE
+  1492                           fsr0h	equ	0xFEA
+  1493                           fsr0l	equ	0xFE9
+  1494                           wreg	equ	0xFE8
+  1495                           postdec1	equ	0xFE5
+  1496                           fsr1h	equ	0xFE2
+  1497                           fsr1l	equ	0xFE1
+  1498                           bsr	equ	0xFE0
+  1499                           fsr2h	equ	0xFDA
+  1500                           fsr2l	equ	0xFD9
+  1501                           status	equ	0xFD8
+  1502                           
+  1503                           	psect	rparam
+  1504  0000                     pclatu	equ	0xFFB
+  1505                           pclath	equ	0xFFA
+  1506                           tblptru	equ	0xFF8
+  1507                           tblptrh	equ	0xFF7
+  1508                           tblptrl	equ	0xFF6
+  1509                           tablat	equ	0xFF5
+  1510                           prodh	equ	0xFF4
+  1511                           prodl	equ	0xFF3
+  1512                           postinc0	equ	0xFEE
+  1513                           fsr0h	equ	0xFEA
+  1514                           fsr0l	equ	0xFE9
+  1515                           wreg	equ	0xFE8
+  1516                           postdec1	equ	0xFE5
+  1517                           fsr1h	equ	0xFE2
+  1518                           fsr1l	equ	0xFE1
+  1519                           bsr	equ	0xFE0
+  1520                           fsr2h	equ	0xFDA
+  1521                           fsr2l	equ	0xFD9
+  1522                           status	equ	0xFD8
+  1523                           
+  1524                           	psect	temp
+  1525  00004C                     btemp:
+  1526                           	opt stack 0
+  1527  00004C                     	ds	1
+  1528  0000                     int$flags	set	btemp
+  1529  0000                     wtemp6	set	btemp+1
+  1530                           pclatu	equ	0xFFB
+  1531                           pclath	equ	0xFFA
+  1532                           tblptru	equ	0xFF8
+  1533                           tblptrh	equ	0xFF7
+  1534                           tblptrl	equ	0xFF6
+  1535                           tablat	equ	0xFF5
+  1536                           prodh	equ	0xFF4
+  1537                           prodl	equ	0xFF3
+  1538                           postinc0	equ	0xFEE
+  1539                           fsr0h	equ	0xFEA
+  1540                           fsr0l	equ	0xFE9
+  1541                           wreg	equ	0xFE8
+  1542                           postdec1	equ	0xFE5
+  1543                           fsr1h	equ	0xFE2
+  1544                           fsr1l	equ	0xFE1
+  1545                           bsr	equ	0xFE0
+  1546                           fsr2h	equ	0xFDA
+  1547                           fsr2l	equ	0xFD9
+  1548                           status	equ	0xFD8
 
 
 Data Sizes:
@@ -1798,23 +1792,23 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.44 build -154322312 
-Symbol Table                                                                                   Sun Oct 01 17:46:01 2017
+Symbol Table                                                                                   Sun Oct 01 23:40:11 2017
 
                           l81 01AE                            l90 0292                            l91 0266  
                           l92 028C                            bsr 000FE0                   __CFG_BORV$3 000000  
   __size_of_UART_Write_String 005A                  __CFG_CP0$OFF 000000                  __CFG_CP1$OFF 000000  
-                         l906 038C                           l658 02B0                           l659 02AA  
+                         l906 0384                           l658 02B0                           l659 02AA  
                 __CFG_CPB$OFF 000000                           u127 0304                  __CFG_CPD$OFF 000000  
                          wreg 000FE8                  __CFG_IESO$ON 000000                  __CFG_LVP$OFF 000000  
-                __CFG_WDT$OFF 000000                          STR_1 3FAB                          STR_2 3FF1  
-                        STR_3 3FE3                          STR_4 3F9D                          STR_5 3FB9  
-                        STR_6 3FD5                          STR_7 3F8F                          STR_8 3FC7  
+                __CFG_WDT$OFF 000000                          STR_1 3F9D                          STR_2 3F8F  
+                        STR_3 3FF1                          STR_4 3FB9                          STR_5 3FC7  
+                        STR_6 3FE3                          STR_7 3FAB                          STR_8 3FD5  
                         STR_9 3F71                          _TRMT 007D61                          _main 00CA  
                         fsr0h 000FEA                          fsr1h 000FE2                          fsr2h 000FDA  
                         fsr0l 000FE9                          fsr1l 000FE1                          fsr2l 000FD9  
                         btemp 004C                          prodh 000FF4                          prodl 000FF3  
                         start 00C6                 __CFG_MCLRE$ON 000000                  ___param_bank 000000  
-             __end_of_InitApp 0398                         ?_main 0001                         STR_10 3F53  
+             __end_of_InitApp 0390                         ?_main 0001                         STR_10 3F53  
                        STR_11 3F26                         STR_12 3F62                         STR_13 3F17  
                        STR_14 3F35                         STR_15 3EF9                         STR_16 3F80  
                        STR_17 3F44                         STR_18 3F08                         _SPBRG 000FAF  
@@ -1841,16 +1835,16 @@ Symbol Table                                                                    
                      _SERVO21 0030                       _SERVO22 002E                       _SERVO16 0038  
                      _SERVO24 002C                       _SERVO17 0036                       _SERVO25 002A  
                      _SERVO18 0034                       _SERVO26 0028                     ?_high_isr 0001  
-                     _InitApp 0396                       __Hparam 0000                       __Lparam 0000  
-          __end_of_UART_Write 0396                       __pcinit 0314                       __ramtop 0300  
+                     _InitApp 038E                       __Hparam 0000                       __Lparam 0000  
+          __end_of_UART_Write 038E                       __pcinit 0314                       __ramtop 0300  
                      __ptext0 00CA                       __ptext1 0246                       __ptext2 02A0  
-                     __ptext3 0388                       __ptext4 02E2                       __ptext5 0396  
+                     __ptext3 0380                       __ptext4 02E2                       __ptext5 038E  
                      __ptext6 0366               __size_of_strlen 0042                       _low_isr 0018  
                   ??_high_isr 0001                __pintcode_body 01B0          end_of_initialization 0334  
                __Lmediumconst 3EF8                       int_func 01B0                     _RCSTAbits 000FAB  
                      postdec1 000FE5                       postinc0 000FEE                       strlen@s 0060  
                    _UART_Init 02E2                UART_Write@data 0060                     _TRISCbits 000F94  
- __end_of_ConfigureOscillator 0388                     _TXSTAbits 000FAC                   _BAUDCONbits 000FB8  
+ __end_of_ConfigureOscillator 0380                     _TXSTAbits 000FAC                   _BAUDCONbits 000FB8  
                   ?_UART_Init 0001                 __pidataCOMRAM 0342                __end_of_strlen 02E2  
          start_initialization 0314              __CFG_LPT1OSC$OFF 000000                      ??_strlen 0062  
                __pcstackBANK0 0060             __size_of_high_isr 023E                      ?_InitApp 0001  
@@ -1859,8 +1853,8 @@ Symbol Table                                                                    
         UART_Write_String@str 0066                     copy_data0 0328              __size_of_InitApp 0002  
                     __Hrparam 0000                      __Lrparam 0000             _UART_Write_String 0246  
           ?_UART_Write_String 0066              __size_of_low_isr 00AE                      _high_isr 0008  
-         ??_UART_Write_String 0068                 __size_of_main 00E6  __size_of_ConfigureOscillator 0022  
+         ??_UART_Write_String 0068                 __size_of_main 00E6  __size_of_ConfigureOscillator 001A  
                     int$flags 004C     __end_of_UART_Write_String 02A0                   _OSCTUNEbits 000F9B  
                     intlevel1 0000                      intlevel2 0000                    _OSCCONbits 000FD3  
           UART_Write_String@a 006C            UART_Write_String@i 006D                      strlen@cp 0064  
-                  _UART_Write 0388  
+                  _UART_Write 0380  

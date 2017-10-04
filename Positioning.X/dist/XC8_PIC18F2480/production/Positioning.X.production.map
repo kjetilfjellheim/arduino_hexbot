@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.44\dat\en_msgs.txt -cs \
   -h+dist/XC8_PIC18F2480/production\Positioning.X.production.sym \
   --cmf=dist/XC8_PIC18F2480/production\Positioning.X.production.cmf -z \
-  -Q18F2480 -oC:\Users\Kjetil\AppData\Local\Temp\sbpc.2 \
+  -Q18F2480 -oC:\Users\Kjetil\AppData\Local\Temp\sl9s.2 \
   -Mdist/XC8_PIC18F2480/production/Positioning.X.production.map -E1 \
   -ver=XC8 -ASTACK=06Fh-02ffh -pstack=STACK -ACODE=00h-03FFFh \
   -ACONST=00h-03FFFh -ASMALLCONST=0300h-03FFhx61 -AMEDIUMCONST=0300h-03FFFh \
@@ -21,7 +21,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj \
+  C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj \
   dist/XC8_PIC18F2480/production\Positioning.X.production.obj 
 
 Object code version is 3.11
@@ -34,7 +34,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
                 init                                 C6       C6        4        C       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0

@@ -11232,7 +11232,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _SERVO1
 :s 2C
 ]
-[; ;main.c: 31: const unsigned char* SERVO1 = "#1P1300T1000\r";
+[; ;main.c: 31: const unsigned char* SERVO1 = "#1P2200T1000\r";
 "32
 [v _SERVO2 `*Cuc ~T0 @X0 1 e ]
 [i _SERVO2
@@ -11544,4 +11544,4 @@ Version 3.2 HI-TECH Software Intermediate Code
 [a 18C 35 50 54 80 49 48 48 48 84 51 48 48 48 13 0 ]
 [a 15C 35 50 50 80 49 48 48 48 84 51 48 48 48 13 0 ]
 [a 1C 35 48 80 49 53 48 48 84 49 48 48 48 13 0 ]
-[a 2C 35 49 80 49 51 48 48 84 49 48 48 48 13 0 ]
+[a 2C 35 49 80 50 50 48 48 84 49 48 48 48 13 0 ]

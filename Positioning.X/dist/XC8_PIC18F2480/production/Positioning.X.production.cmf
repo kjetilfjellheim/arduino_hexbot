@@ -11,11 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-idloc IDLOC 0 200000 200000 8 1
-init CODE 0 C6 C6 4 1
-reset_vec CODE 0 0 0 4 1
-config CONFIG 0 300000 300000 E 1
 $dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 intcodelo CODE 0 18 18 AE 1
 cinit CODE 0 314 314 2E 1
@@ -34,6 +29,11 @@ temp COMRAM 1 4C 4C 1 1
 intcode CODE 0 8 8 6 1
 dataCOMRAM COMRAM 1 28 28 24 1
 mediumconst MEDIUMCONST 0 3EF8 3EF8 108 1
+$C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 C6 C6 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -141,30 +141,30 @@ FA text0 CODE >63:D:\code\githubrepos\arduino_hexbot\Positioning.X\main.c
 196 text0 CODE >76:D:\code\githubrepos\arduino_hexbot\Positioning.X\main.c
 1A2 text0 CODE >77:D:\code\githubrepos\arduino_hexbot\Positioning.X\main.c
 1AE text0 CODE >79:D:\code\githubrepos\arduino_hexbot\Positioning.X\main.c
-314 cinit CODE >4559:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-314 cinit CODE >4561:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-314 cinit CODE >4564:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-314 cinit CODE >4681:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-316 cinit CODE >4682:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-318 cinit CODE >4683:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-31A cinit CODE >4684:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-31C cinit CODE >4685:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-31E cinit CODE >4686:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-320 cinit CODE >4687:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-324 cinit CODE >4688:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-328 cinit CODE >4689:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-328 cinit CODE >4690:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-32A cinit CODE >4691:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-32E cinit CODE >4692:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-330 cinit CODE >4693:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-332 cinit CODE >4694:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-334 cinit CODE >4700:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-334 cinit CODE >4702:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-336 cinit CODE >4703:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-338 cinit CODE >4705:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-33A cinit CODE >4706:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-33C cinit CODE >4707:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
-33E cinit CODE >4708:C:\Users\Kjetil\AppData\Local\Temp\sbpc.
+314 cinit CODE >4559:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+314 cinit CODE >4561:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+314 cinit CODE >4564:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+314 cinit CODE >4681:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+316 cinit CODE >4682:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+318 cinit CODE >4683:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+31A cinit CODE >4684:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+31C cinit CODE >4685:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+31E cinit CODE >4686:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+320 cinit CODE >4687:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+324 cinit CODE >4688:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+328 cinit CODE >4689:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+328 cinit CODE >4690:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+32A cinit CODE >4691:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+32E cinit CODE >4692:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+330 cinit CODE >4693:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+332 cinit CODE >4694:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+334 cinit CODE >4700:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+334 cinit CODE >4702:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+336 cinit CODE >4703:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+338 cinit CODE >4705:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+33A cinit CODE >4706:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+33C cinit CODE >4707:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
+33E cinit CODE >4708:C:\Users\Kjetil\AppData\Local\Temp\sl9s.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -182,25 +182,25 @@ __Hspace_0 30000E 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.product
 __Hspace_1 6F 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-__mediumconst 3EF8 0 MEDIUMCONST 0 mediumconst C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+__mediumconst 3EF8 0 MEDIUMCONST 0 mediumconst C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 _TRMT 7D61 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+___sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 _main CA 0 CODE 0 text0 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 btemp 4C 0 COMRAM 1 temp dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-start C6 0 CODE 0 init C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+start C6 0 CODE 0 init C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hpowerup C6 0 CODE 0 powerup dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __end_of_ConfigureOscillator 380 0 CODE 0 text6 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __size_of_low_isr 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-intlevel0 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-intlevel1 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-intlevel2 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-intlevel3 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+__accesstop 60 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+intlevel0 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+intlevel1 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+intlevel2 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+intlevel3 0 0 CODE 0 text C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 _InitApp 38E 0 CODE 0 text5 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 _OSCCONbits FD3 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/XC8_PIC18F2480/production\Positioning.X.production.obj
@@ -212,8 +212,8 @@ __CFG_EBTRB$OFF 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.product
 __Hifardata 0 0 CODE 0 ifardata dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __pidataCOMRAM 342 0 CODE 0 idataCOMRAM dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 UART_Write_String@str 66 0 BANK0 1 cstackBANK0 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
@@ -270,7 +270,7 @@ __Htext5 0 0 ABS 0 text5 dist/XC8_PIC18F2480/production\Positioning.X.production
 __Htext6 0 0 ABS 0 text6 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __Hcomram 0 0 ABS 0 comram dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/XC8_PIC18F2480/production\Positioning.X.production.obj
@@ -346,8 +346,8 @@ __Lfarbss 0 0 FARRAM 0 farbss dist/XC8_PIC18F2480/production\Positioning.X.produ
 _strlen 2A0 0 CODE 0 text2 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 _low_isr 18 0 CODE 0 intcodelo dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-stackhi 2FF 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
-stacklo 6F 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+stackhi 2FF 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
+stacklo 6F 0 ABS 0 - C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __Lintcode 8 0 CODE 0 intcode dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/XC8_PIC18F2480/production\Positioning.X.production.obj
@@ -389,7 +389,7 @@ __ptext5 38E 0 CODE 0 text5 dist/XC8_PIC18F2480/production\Positioning.X.product
 __ptext6 366 0 CODE 0 text6 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __end_of_InitApp 390 0 CODE 0 text5 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/XC8_PIC18F2480/production\Positioning.X.production.obj
-__ramtop 300 0 RAM 0 ramtop C:\Users\Kjetil\AppData\Local\Temp\sbpc.obj
+__ramtop 300 0 RAM 0 ramtop C:\Users\Kjetil\AppData\Local\Temp\sl9s.obj
 __Lpowerup C6 0 CODE 0 powerup dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 UART_Write@data 60 0 BANK0 1 cstackBANK0 dist/XC8_PIC18F2480/production\Positioning.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/XC8_PIC18F2480/production\Positioning.X.production.obj

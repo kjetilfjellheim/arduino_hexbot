@@ -37,29 +37,29 @@
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"27 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\interrupts.c
+"27 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\interrupts.c
 [v _high_isr high_isr `II(v  1 e 1 0 ]
 "67
 [v _low_isr low_isr `IIL(v  1 e 1 0 ]
-"137 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\main.c
+"159 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"172
+"197
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
-"189
+"214
 [v _UART_Write_String UART_Write_String `(v  1 e 1 0 ]
-"200
+"225
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"208
+"233
 [v _FillServoPositionString FillServoPositionString `(v  1 e 1 0 ]
-"237
+"262
 [v _EmptyMovementString EmptyMovementString `(v  1 e 1 0 ]
-"241
+"266
 [v _InitServos InitServos `(v  1 e 1 0 ]
-"272
+"297
 [v _RotatePositions RotatePositions `(v  1 e 1 0 ]
-"23 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\system.c
+"23 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
-[s S221 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S226 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -69,7 +69,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "26907 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f2480.h
-[s S230 . 1 `uc 1 RC0 1 0 :1:0 
+[s S235 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -78,15 +78,15 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S239 . 1 `S221 1 . 1 0 `S230 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES239  1 e 1 @3988 ]
-[s S397 . 1 `uc 1 TUN 1 0 :5:0 
+[u S244 . 1 `S226 1 . 1 0 `S235 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES244  1 e 1 @3988 ]
+[s S407 . 1 `uc 1 TUN 1 0 :5:0 
 `uc 1 . 1 0 :1:5 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
 ]
 "27119
-[s S402 . 1 `uc 1 TUN0 1 0 :1:0 
+[s S412 . 1 `uc 1 TUN0 1 0 :1:0 
 `uc 1 TUN1 1 0 :1:1 
 `uc 1 TUN2 1 0 :1:2 
 `uc 1 TUN3 1 0 :1:3 
@@ -94,9 +94,9 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 INTSCR 1 0 :1:7 
 ]
-[u S410 . 1 `S397 1 . 1 0 `S402 1 . 1 0 ]
-[v _OSCTUNEbits OSCTUNEbits `VES410  1 e 1 @3995 ]
-[s S167 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S420 . 1 `S407 1 . 1 0 `S412 1 . 1 0 ]
+[v _OSCTUNEbits OSCTUNEbits `VES420  1 e 1 @3995 ]
+[s S172 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -106,23 +106,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "27989
-[s S176 . 1 `uc 1 . 1 0 :3:0 
+[s S181 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S179 . 1 `uc 1 . 1 0 :5:0 
+[s S184 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S182 . 1 `uc 1 . 1 0 :6:0 
+[s S187 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S185 . 1 `uc 1 . 1 0 :6:0 
+[s S190 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S188 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S193 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S190 . 1 `S167 1 . 1 0 `S176 1 . 1 0 `S179 1 . 1 0 `S182 1 . 1 0 `S185 1 . 1 0 `S188 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES190  1 e 1 @4011 ]
-[s S113 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S195 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 `S187 1 . 1 0 `S190 1 . 1 0 `S193 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES195  1 e 1 @4011 ]
+[s S118 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -132,7 +132,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "28197
-[s S122 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S127 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -141,20 +141,20 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S131 . 1 `uc 1 . 1 0 :6:0 
+[s S136 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S134 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S139 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S136 . 1 `S113 1 . 1 0 `S122 1 . 1 0 `S131 1 . 1 0 `S134 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES136  1 e 1 @4012 ]
+[u S141 . 1 `S118 1 . 1 0 `S127 1 . 1 0 `S136 1 . 1 0 `S139 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES141  1 e 1 @4012 ]
 "28414
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "28438
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "28450
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
-[s S71 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S76 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -164,86 +164,89 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "28660
-[s S80 . 1 `uc 1 . 1 0 :4:0 
+[s S85 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
-[s S83 . 1 `uc 1 . 1 0 :5:0 
+[s S88 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S86 . 1 `uc 1 . 1 0 :1:0 
+[s S91 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S89 . 1 `S71 1 . 1 0 `S80 1 . 1 0 `S83 1 . 1 0 `S86 1 . 1 0 ]
-[v _BAUDCONbits BAUDCONbits `VES89  1 e 1 @4024 ]
-[s S427 . 1 `uc 1 SCS 1 0 :2:0 
+[u S94 . 1 `S76 1 . 1 0 `S85 1 . 1 0 `S88 1 . 1 0 `S91 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES94  1 e 1 @4024 ]
+[s S437 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 IOFS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 `uc 1 IDLEN 1 0 :1:7 
 ]
 "30341
-[s S433 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S443 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S440 . 1 `S427 1 . 1 0 `S433 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES440  1 e 1 @4051 ]
+[u S450 . 1 `S437 1 . 1 0 `S443 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES450  1 e 1 @4051 ]
 "35508
 "35508
 [v _TRMT TRMT `VEb  1 e 0 @32097 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
-"27 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\main.c
-[v _SERVOSETS SERVOSETS `Cui  1 e 2 0 ]
-[s S33 . 16 `[4]i 1 verticalMovement 8 0 `[4]i 1 horizontalMovement 8 8 ]
-"56
-[v _positions positions `CS33  1 e 16 0 ]
-[s S36 . 21 `ui 1 currentServoPosition 2 0 `[3]uc 1 horizontalServo 3 2 `[3]uc 1 upperVerticalServo 3 5 `[3]uc 1 lowerVerticalServo 3 8 `i 1 horizontalMediumPosition 2 11 `i 1 verticalUpperMediumPosition 2 13 `i 1 verticalLowerMediumPosition 2 15 `i 1 multiplierHorizontal 2 17 `i 1 multiplierVertical 2 19 ]
-"64
-[v _servosets servosets `[6]S36  1 e 126 0 ]
-"135
+[s S33 . 48 `[6]i 1 right 12 0 `[6]i 1 left 12 12 `[6]i 1 forward 12 24 `[6]i 1 backward 12 36 ]
+"66 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
+[v _turns turns `CS33  1 e 48 0 ]
+[s S38 . 16 `[4]i 1 verticalMovement 8 0 `[4]i 1 horizontalMovement 8 8 ]
+"73
+[v _positions positions `CS38  1 e 16 0 ]
+[s S41 . 21 `ui 1 currentServoPosition 2 0 `[3]uc 1 horizontalServo 3 2 `[3]uc 1 upperVerticalServo 3 5 `[3]uc 1 lowerVerticalServo 3 8 `i 1 horizontalMediumPosition 2 11 `i 1 verticalUpperMediumPosition 2 13 `i 1 verticalLowerMediumPosition 2 15 `i 1 multiplierHorizontal 2 17 `i 1 multiplierVertical 2 19 ]
+"81
+[v _servosets servosets `[6]S41  1 e 126 0 ]
+"152
 [v _movementString movementString `[256]uc  1 e 256 0 ]
-"137
+"157
+[v _currentDirection currentDirection `*.25i  1 e 2 0 ]
+"159
 [v _main main `(v  1 e 1 0 ]
 {
-"170
+"195
 } 0
-"172
+"197
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 {
-"187
+"212
 } 0
-"272
+"297
 [v _RotatePositions RotatePositions `(v  1 e 1 0 ]
 {
-"273
+"298
 [v RotatePositions@i i `ui  1 a 2 47 ]
-"281
+"306
 } 0
-"241
+"266
 [v _InitServos InitServos `(v  1 e 1 0 ]
 {
-"242
+"267
 [v InitServos@tmp tmp `[5]uc  1 a 5 13 ]
-"243
+"268
 [v InitServos@i i `ui  1 a 2 18 ]
-"270
+"295
 } 0
-"189
+"214
 [v _UART_Write_String UART_Write_String `(v  1 e 1 0 ]
 {
-"192
+"217
 [v UART_Write_String@a a `uc  1 a 1 52 ]
-"191
+"216
 [v UART_Write_String@i i `i  1 a 2 50 ]
-"190
+"215
 [v UART_Write_String@arrayLength arrayLength `i  1 a 2 48 ]
-"189
+"214
 [v UART_Write_String@str str `*.39Cuc  1 p 2 45 ]
-"198
+"223
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -254,30 +257,30 @@
 [v strlen@s s `*.39Cuc  1 p 2 39 ]
 "13
 } 0
-"200 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\main.c
+"225 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 39 ]
-"203
+"228
 } 0
-"208
+"233
 [v _FillServoPositionString FillServoPositionString `(v  1 e 1 0 ]
 {
-"224
-[v FillServoPositionString@newVerticalPosition newVerticalPosition `i  1 a 2 19 ]
-"223
-[v FillServoPositionString@deltaVertical deltaVertical `i  1 a 2 17 ]
-"217
-[v FillServoPositionString@newHorizontalPosition newHorizontalPosition `i  1 a 2 15 ]
-"216
-[v FillServoPositionString@deltaHorizontal deltaHorizontal `i  1 a 2 13 ]
-"210
-[v FillServoPositionString@tmp tmp `[5]uc  1 a 5 21 ]
-"211
-[v FillServoPositionString@i i `ui  1 a 2 30 ]
-"234
+"249
+[v FillServoPositionString@newVerticalPosition newVerticalPosition `i  1 a 2 23 ]
+"248
+[v FillServoPositionString@deltaVertical deltaVertical `i  1 a 2 21 ]
+"242
+[v FillServoPositionString@newHorizontalPosition newHorizontalPosition `i  1 a 2 19 ]
+"241
+[v FillServoPositionString@deltaHorizontal deltaHorizontal `i  1 a 2 17 ]
+"235
+[v FillServoPositionString@tmp tmp `[5]uc  1 a 5 27 ]
+"236
+[v FillServoPositionString@i i `ui  1 a 2 36 ]
+"259
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\strcat.c
 [v _strcat strcat `(*.39uc  1 e 2 0 ]
@@ -339,10 +342,10 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 41 ]
 "53
 } 0
-"237 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\main.c
+"262 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _EmptyMovementString EmptyMovementString `(v  1 e 1 0 ]
 {
-"239
+"264
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
@@ -355,12 +358,12 @@
 [v memset@n n `ui  1 p 2 43 ]
 "22
 } 0
-"23 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\system.c
+"23 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
 {
 "30
 } 0
-"67 D:\code\githubrepos\arduino_hexbot\SimpleWalking.X\interrupts.c
+"67 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\interrupts.c
 [v _low_isr low_isr `IIL(v  1 e 1 0 ]
 {
 "102

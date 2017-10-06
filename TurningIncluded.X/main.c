@@ -19,12 +19,15 @@
  */
 #define MAX_MOVEMENT_STRING_LENGTH 256
 
+/** 
+ * Positions the servoes can be in.
+ */
 #define POSITIONS 4
 
 /**
  * Servosets. Each 3 servos(leg) is a set.
  */
-const unsigned int SERVOSETS = 6;
+#define SERVOSETS 6
 
 char UART_Init();
 char UART_Data_Ready();
@@ -42,6 +45,13 @@ typedef struct {
 } Position;
 
 typedef struct {
+    int right[SERVOSETS];    
+    int left[SERVOSETS];
+    int forward[SERVOSETS];
+    int backward[SERVOSETS];
+} Turn;
+
+typedef struct {
     unsigned int currentServoPosition;
     char horizontalServo[3];
     char upperVerticalServo[3];
@@ -52,6 +62,13 @@ typedef struct {
     int multiplierHorizontal;
     int multiplierVertical;
 } Servoset;
+
+const Turn turns = {
+    {-1, -1, -1, 1, 1, 1},    
+    {1, 1, 1, -1, -1, -1},
+    {1, 1, 1, 1, 1, 1},
+    {-1, -1, -1, -1, -1, -1},
+ };
 
 const Position positions = {
     {0, 0, 200, 0},
@@ -134,8 +151,16 @@ const Position positions = {
  */
 char movementString[MAX_MOVEMENT_STRING_LENGTH] = "";
 
-void main(void) {    
-    
+/**
+ * Direction (Forward, backward, left or right)
+ */
+int *currentDirection;
+
+void main(void) {
+    /**
+     * Setting default values.
+     */
+    currentDirection = turns.left;
     /**
      * Configure oscillator registries.
      */
@@ -213,7 +238,7 @@ void FillServoPositionString() {
         strcat(movementString, "#");
         strcat(movementString, servosets[i].horizontalServo);
         strcat(movementString, "P");
-        int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal;
+        int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * currentDirection[i];
         int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
         sprintf(tmp, "%d", newHorizontalPosition);
         strcat(movementString, tmp);

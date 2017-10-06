@@ -1,22 +1,25 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"39 main.c
+"47 main.c
+[s S1045 `i -> 6 `i `i -> 6 `i `i -> 6 `i `i -> 6 `i ]
+[n S1045 . right left forward backward ]
+"42
 [s S1044 `i -> 4 `i `i -> 4 `i ]
 [n S1044 . verticalMovement horizontalMovement ]
-"44
-[s S1045 `ui 1 `uc -> 3 `i `uc -> 3 `i `uc -> 3 `i `i 1 `i 1 `i 1 `i 1 `i 1 ]
-[n S1045 . currentServoPosition horizontalServo upperVerticalServo lowerVerticalServo horizontalMediumPosition verticalUpperMediumPosition verticalLowerMediumPosition multiplierHorizontal multiplierVertical ]
+"54
+[s S1046 `ui 1 `uc -> 3 `i `uc -> 3 `i `uc -> 3 `i `i 1 `i 1 `i 1 `i 1 `i 1 ]
+[n S1046 . currentServoPosition horizontalServo upperVerticalServo lowerVerticalServo horizontalMediumPosition verticalUpperMediumPosition verticalLowerMediumPosition multiplierHorizontal multiplierVertical ]
 [p mainexit ]
 "19 system.h
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"29 main.c
+"32 main.c
 [v _UART_Init `(uc ~T0 @X0 0 ef ]
-"36
+"39
 [v _InitServos `(v ~T0 @X0 0 ef ]
-"34
-[v _FillServoPositionString `(v ~T0 @X0 0 ef ]
-"33
-[v _UART_Write_String `(v ~T0 @X0 0 ef1`*Cuc ]
 "37
+[v _FillServoPositionString `(v ~T0 @X0 0 ef ]
+"36
+[v _UART_Write_String `(v ~T0 @X0 0 ef1`*Cuc ]
+"40
 [v _RotatePositions `(v ~T0 @X0 0 ef ]
 "28637 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f2480.h
 [s S931 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -96,13 +99,13 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p i __delay ]
 "56 C:\Program Files (x86)\Microchip\xc8\v1.44\include\string.h
 [v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
-"32 main.c
+"35 main.c
 [v _UART_Write `(v ~T0 @X0 0 ef1`uc ]
 "35508 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f2480.h
 [v _TRMT `Vb ~T0 @X0 0 e@32097 ]
 "28414
 [v _TXREG `Vuc ~T0 @X0 0 e@4013 ]
-"35 main.c
+"38 main.c
 [v _EmptyMovementString `(v ~T0 @X0 0 ef ]
 "36 C:\Program Files (x86)\Microchip\xc8\v1.44\include\string.h
 [v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
@@ -11263,50 +11266,100 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;string.h: 60: extern char * strrichr(const char *, int);
 [; ;system.h: 19: void ConfigureOscillator(void);
 [; ;user.h: 13: void InitApp(void);
-"27 main.c
-[v _SERVOSETS `Cui ~T0 @X0 1 e ]
-[i _SERVOSETS
--> -> 6 `i `ui
+[; ;main.c: 32: char UART_Init();
+[; ;main.c: 33: char UART_Data_Ready();
+[; ;main.c: 34: char UART_Read();
+[; ;main.c: 35: void UART_Write(char data);
+[; ;main.c: 36: void UART_Write_String(const char str[]);
+[; ;main.c: 37: void FillServoPositionString();
+[; ;main.c: 38: void EmptyMovementString();
+[; ;main.c: 39: void InitServos();
+[; ;main.c: 40: void RotatePositions();
+[; ;main.c: 42: typedef struct {
+[; ;main.c: 43: int verticalMovement[4];
+[; ;main.c: 44: int horizontalMovement[4];
+[; ;main.c: 45: } Position;
+[; ;main.c: 47: typedef struct {
+[; ;main.c: 48: int right[6];
+[; ;main.c: 49: int left[6];
+[; ;main.c: 50: int forward[6];
+[; ;main.c: 51: int backward[6];
+[; ;main.c: 52: } Turn;
+[; ;main.c: 54: typedef struct {
+[; ;main.c: 55: unsigned int currentServoPosition;
+[; ;main.c: 56: char horizontalServo[3];
+[; ;main.c: 57: char upperVerticalServo[3];
+[; ;main.c: 58: char lowerVerticalServo[3];
+[; ;main.c: 59: int horizontalMediumPosition;
+[; ;main.c: 60: int verticalUpperMediumPosition;
+[; ;main.c: 61: int verticalLowerMediumPosition;
+[; ;main.c: 62: int multiplierHorizontal;
+[; ;main.c: 63: int multiplierVertical;
+[; ;main.c: 64: } Servoset;
+"66 main.c
+[v _turns `CS1045 ~T0 @X0 1 e ]
+[i _turns
+:U ..
+:U ..
+:U ..
+"67
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+..
+:U ..
+"68
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+..
+:U ..
+"69
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+-> 1 `i
+..
+:U ..
+"70
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+-U -> 1 `i
+..
+..
+..
 ]
-[; ;main.c: 27: const unsigned int SERVOSETS = 6;
-[; ;main.c: 29: char UART_Init();
-[; ;main.c: 30: char UART_Data_Ready();
-[; ;main.c: 31: char UART_Read();
-[; ;main.c: 32: void UART_Write(char data);
-[; ;main.c: 33: void UART_Write_String(const char str[]);
-[; ;main.c: 34: void FillServoPositionString();
-[; ;main.c: 35: void EmptyMovementString();
-[; ;main.c: 36: void InitServos();
-[; ;main.c: 37: void RotatePositions();
-[; ;main.c: 39: typedef struct {
-[; ;main.c: 40: int verticalMovement[4];
-[; ;main.c: 41: int horizontalMovement[4];
-[; ;main.c: 42: } Position;
-[; ;main.c: 44: typedef struct {
-[; ;main.c: 45: unsigned int currentServoPosition;
-[; ;main.c: 46: char horizontalServo[3];
-[; ;main.c: 47: char upperVerticalServo[3];
-[; ;main.c: 48: char lowerVerticalServo[3];
-[; ;main.c: 49: int horizontalMediumPosition;
-[; ;main.c: 50: int verticalUpperMediumPosition;
-[; ;main.c: 51: int verticalLowerMediumPosition;
-[; ;main.c: 52: int multiplierHorizontal;
-[; ;main.c: 53: int multiplierVertical;
-[; ;main.c: 54: } Servoset;
-"56
+[; ;main.c: 66: const Turn turns = {
+[; ;main.c: 67: {-1, -1, -1, 1, 1, 1},
+[; ;main.c: 68: {1, 1, 1, -1, -1, -1},
+[; ;main.c: 69: {1, 1, 1, 1, 1, 1},
+[; ;main.c: 70: {-1, -1, -1, -1, -1, -1},
+[; ;main.c: 71: };
+"73
 [v _positions `CS1044 ~T0 @X0 1 e ]
 [i _positions
 :U ..
 :U ..
 :U ..
-"57
+"74
 -> 0 `i
 -> 0 `i
 -> 200 `i
 -> 0 `i
 ..
 :U ..
-"58
+"75
 -> 0 `i
 -> 200 `i
 -> 0 `i
@@ -11315,16 +11368,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-[; ;main.c: 56: const Position positions = {
-[; ;main.c: 57: {0, 0, 200, 0},
-[; ;main.c: 58: {0, 200, 0, -200}
-[; ;main.c: 59: };
-"64
-[v _servosets `S1045 ~T0 @X0 -> 0 `x e ]
+[; ;main.c: 73: const Position positions = {
+[; ;main.c: 74: {0, 0, 200, 0},
+[; ;main.c: 75: {0, 200, 0, -200}
+[; ;main.c: 76: };
+"81
+[v _servosets `S1046 ~T0 @X0 -> 0 `x e ]
 [i _servosets
 :U ..
 :U ..
-"66
+"83
 -> -> 0 `i `ui
 :U ..
 -> 49 `c
@@ -11339,19 +11392,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 50 `c
 -> 0 `c
 ..
-"70
+"87
 -> 1700 `i
-"71
+"88
 -> 2200 `i
-"72
+"89
 -> 1800 `i
-"73
+"90
 -> 1 `i
-"75
+"92
 -> 1 `i
 ..
 :U ..
-"77
+"94
 -> -> 2 `i `ui
 :U ..
 -> 52 `c
@@ -11365,19 +11418,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 54 `c
 -> 0 `c
 ..
-"81
+"98
 -> 1350 `i
-"82
+"99
 -> 1600 `i
-"83
+"100
 -> 1700 `i
-"84
+"101
 -> 1 `i
-"86
+"103
 -> 1 `i
 ..
 :U ..
-"88
+"105
 -> -> 0 `i `ui
 :U ..
 -> 56 `c
@@ -11392,19 +11445,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 48 `c
 -> 0 `c
 ..
-"92
+"109
 -> 1000 `i
-"93
+"110
 -> 1600 `i
-"94
+"111
 -> 1800 `i
-"95
+"112
 -> 1 `i
-"97
+"114
 -> 1 `i
 ..
 :U ..
-"99
+"116
 -> -> 2 `i `ui
 :U ..
 -> 49 `c
@@ -11421,19 +11474,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 56 `c
 -> 0 `c
 ..
-"103
+"120
 -> 1600 `i
-"104
+"121
 -> 1200 `i
-"105
+"122
 -> 1500 `i
-"106
+"123
 -U -> 1 `i
-"108
+"125
 -U -> 1 `i
 ..
 :U ..
-"110
+"127
 -> -> 0 `i `ui
 :U ..
 -> 50 `c
@@ -11450,19 +11503,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 50 `c
 -> 0 `c
 ..
-"114
+"131
 -> 2100 `i
-"115
+"132
 -> 1300 `i
-"116
+"133
 -> 1000 `i
-"117
+"134
 -U -> 1 `i
-"119
+"136
 -U -> 1 `i
 ..
 :U ..
-"121
+"138
 -> -> 2 `i `ui
 :U ..
 -> 50 `c
@@ -11479,518 +11532,524 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 54 `c
 -> 0 `c
 ..
-"125
+"142
 -> 1900 `i
-"126
+"143
 -> 1400 `i
-"127
+"144
 -> 1000 `i
-"128
+"145
 -U -> 1 `i
-"130
+"147
 -U -> 1 `i
 ..
 ..
 ]
-[; ;main.c: 64: Servoset servosets[] = {
-[; ;main.c: 65: {
-[; ;main.c: 66: 0,
-[; ;main.c: 67: "12",
-[; ;main.c: 68: "1",
-[; ;main.c: 69: "2",
-[; ;main.c: 70: 1700,
-[; ;main.c: 71: 2200,
-[; ;main.c: 72: 1800,
-[; ;main.c: 73: 1,
-[; ;main.c: 74: 1
-[; ;main.c: 75: },
-[; ;main.c: 76: {
-[; ;main.c: 77: 2,
-[; ;main.c: 78: "4",
-[; ;main.c: 79: "5",
-[; ;main.c: 80: "6",
-[; ;main.c: 81: 1350,
-[; ;main.c: 82: 1600,
-[; ;main.c: 83: 1700,
-[; ;main.c: 84: 1,
-[; ;main.c: 85: 1
-[; ;main.c: 86: },
-[; ;main.c: 87: {
-[; ;main.c: 88: 0,
-[; ;main.c: 89: "8",
-[; ;main.c: 90: "9",
-[; ;main.c: 91: "10",
-[; ;main.c: 92: 1000,
-[; ;main.c: 93: 1600,
-[; ;main.c: 94: 1800,
-[; ;main.c: 95: 1,
-[; ;main.c: 96: 1
-[; ;main.c: 97: },
-[; ;main.c: 98: {
-[; ;main.c: 99: 2,
-[; ;main.c: 100: "16",
-[; ;main.c: 101: "17",
-[; ;main.c: 102: "18",
-[; ;main.c: 103: 1600,
-[; ;main.c: 104: 1200,
-[; ;main.c: 105: 1500,
-[; ;main.c: 106: -1,
-[; ;main.c: 107: -1
-[; ;main.c: 108: },
-[; ;main.c: 109: {
-[; ;main.c: 110: 0,
-[; ;main.c: 111: "20",
-[; ;main.c: 112: "21",
-[; ;main.c: 113: "22",
-[; ;main.c: 114: 2100,
-[; ;main.c: 115: 1300,
-[; ;main.c: 116: 1000,
-[; ;main.c: 117: -1,
-[; ;main.c: 118: -1
-[; ;main.c: 119: },
-[; ;main.c: 120: {
-[; ;main.c: 121: 2,
-[; ;main.c: 122: "24",
-[; ;main.c: 123: "25",
-[; ;main.c: 124: "26",
-[; ;main.c: 125: 1900,
-[; ;main.c: 126: 1400,
-[; ;main.c: 127: 1000,
-[; ;main.c: 128: -1,
-[; ;main.c: 129: -1
-[; ;main.c: 130: }
-[; ;main.c: 131: };
-"135
+[; ;main.c: 81: Servoset servosets[] = {
+[; ;main.c: 82: {
+[; ;main.c: 83: 0,
+[; ;main.c: 84: "12",
+[; ;main.c: 85: "1",
+[; ;main.c: 86: "2",
+[; ;main.c: 87: 1700,
+[; ;main.c: 88: 2200,
+[; ;main.c: 89: 1800,
+[; ;main.c: 90: 1,
+[; ;main.c: 91: 1
+[; ;main.c: 92: },
+[; ;main.c: 93: {
+[; ;main.c: 94: 2,
+[; ;main.c: 95: "4",
+[; ;main.c: 96: "5",
+[; ;main.c: 97: "6",
+[; ;main.c: 98: 1350,
+[; ;main.c: 99: 1600,
+[; ;main.c: 100: 1700,
+[; ;main.c: 101: 1,
+[; ;main.c: 102: 1
+[; ;main.c: 103: },
+[; ;main.c: 104: {
+[; ;main.c: 105: 0,
+[; ;main.c: 106: "8",
+[; ;main.c: 107: "9",
+[; ;main.c: 108: "10",
+[; ;main.c: 109: 1000,
+[; ;main.c: 110: 1600,
+[; ;main.c: 111: 1800,
+[; ;main.c: 112: 1,
+[; ;main.c: 113: 1
+[; ;main.c: 114: },
+[; ;main.c: 115: {
+[; ;main.c: 116: 2,
+[; ;main.c: 117: "16",
+[; ;main.c: 118: "17",
+[; ;main.c: 119: "18",
+[; ;main.c: 120: 1600,
+[; ;main.c: 121: 1200,
+[; ;main.c: 122: 1500,
+[; ;main.c: 123: -1,
+[; ;main.c: 124: -1
+[; ;main.c: 125: },
+[; ;main.c: 126: {
+[; ;main.c: 127: 0,
+[; ;main.c: 128: "20",
+[; ;main.c: 129: "21",
+[; ;main.c: 130: "22",
+[; ;main.c: 131: 2100,
+[; ;main.c: 132: 1300,
+[; ;main.c: 133: 1000,
+[; ;main.c: 134: -1,
+[; ;main.c: 135: -1
+[; ;main.c: 136: },
+[; ;main.c: 137: {
+[; ;main.c: 138: 2,
+[; ;main.c: 139: "24",
+[; ;main.c: 140: "25",
+[; ;main.c: 141: "26",
+[; ;main.c: 142: 1900,
+[; ;main.c: 143: 1400,
+[; ;main.c: 144: 1000,
+[; ;main.c: 145: -1,
+[; ;main.c: 146: -1
+[; ;main.c: 147: }
+[; ;main.c: 148: };
+"152
 [v _movementString `uc ~T0 @X0 -> 256 `i e ]
 [i _movementString
 :U ..
 -> 0 `c
 ..
 ]
-[; ;main.c: 135: char movementString[256] = "";
+[; ;main.c: 152: char movementString[256] = "";
+"157
+[v _currentDirection `*i ~T0 @X0 1 e ]
+[; ;main.c: 157: int *currentDirection;
 [v $root$_main `(v ~T0 @X0 0 e ]
-"137
+"159
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 137: void main(void) {
+[; ;main.c: 159: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 142: ConfigureOscillator();
-"142
+[; ;main.c: 163: currentDirection = turns.left;
+"163
+[e = _currentDirection -> &U . _turns 1 `*i ]
+[; ;main.c: 167: ConfigureOscillator();
+"167
 [e ( _ConfigureOscillator ..  ]
-[; ;main.c: 146: UART_Init();
-"146
+[; ;main.c: 171: UART_Init();
+"171
 [e ( _UART_Init ..  ]
-[; ;main.c: 150: InitServos();
-"150
+[; ;main.c: 175: InitServos();
+"175
 [e ( _InitServos ..  ]
-[; ;main.c: 154: while (1) {
-"154
-[e :U 1048 ]
-{
-[; ;main.c: 158: FillServoPositionString();
-"158
-[e ( _FillServoPositionString ..  ]
-[; ;main.c: 162: UART_Write_String(movementString);
-"162
-[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
-[; ;main.c: 166: RotatePositions();
-"166
-[e ( _RotatePositions ..  ]
-"168
-}
-[e :U 1047 ]
-"154
-[e $U 1048  ]
+[; ;main.c: 179: while (1) {
+"179
 [e :U 1049 ]
-[; ;main.c: 168: }
-[; ;main.c: 170: }
-"170
-[e :UE 1046 ]
+{
+[; ;main.c: 183: FillServoPositionString();
+"183
+[e ( _FillServoPositionString ..  ]
+[; ;main.c: 187: UART_Write_String(movementString);
+"187
+[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
+[; ;main.c: 191: RotatePositions();
+"191
+[e ( _RotatePositions ..  ]
+"193
 }
-"172
+[e :U 1048 ]
+"179
+[e $U 1049  ]
+[e :U 1050 ]
+[; ;main.c: 193: }
+[; ;main.c: 195: }
+"195
+[e :UE 1047 ]
+}
+"197
 [v _UART_Init `(uc ~T0 @X0 1 ef ]
 {
-[; ;main.c: 172: char UART_Init() {
+[; ;main.c: 197: char UART_Init() {
 [e :U _UART_Init ]
 [f ]
-[; ;main.c: 173: BAUDCONbits.BRG16 = 0b1;
-"173
+[; ;main.c: 198: BAUDCONbits.BRG16 = 0b1;
+"198
 [e = . . _BAUDCONbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 174: TXSTAbits.BRGH = 0b1;
-"174
+[; ;main.c: 199: TXSTAbits.BRGH = 0b1;
+"199
 [e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 175: SPBRG = 51;
-"175
+[; ;main.c: 200: SPBRG = 51;
+"200
 [e = _SPBRG -> -> 51 `i `uc ]
-[; ;main.c: 176: SPBRGH = 0;
-"176
+[; ;main.c: 201: SPBRGH = 0;
+"201
 [e = _SPBRGH -> -> 0 `i `uc ]
-[; ;main.c: 177: TXSTAbits.SYNC = 0b0;
-"177
+[; ;main.c: 202: TXSTAbits.SYNC = 0b0;
+"202
 [e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 178: RCSTAbits.SPEN = 0b1;
-"178
+[; ;main.c: 203: RCSTAbits.SPEN = 0b1;
+"203
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 179: TXSTAbits.TXEN = 0b1;
-"179
+[; ;main.c: 204: TXSTAbits.TXEN = 0b1;
+"204
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;main.c: 181: TRISCbits.TRISC6 = 0b0;
-"181
+[; ;main.c: 206: TRISCbits.TRISC6 = 0b0;
+"206
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
-[; ;main.c: 182: TRISCbits.TRISC7 = 0b1;
-"182
+[; ;main.c: 207: TRISCbits.TRISC7 = 0b1;
+"207
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 184: _delay((unsigned long)((1000)*(2000000/4000.0)));
-"184
+[; ;main.c: 209: _delay((unsigned long)((1000)*(2000000/4000.0)));
+"209
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 2000000 `l `d .4000.0 `ul ]
-[; ;main.c: 186: return 1;
-"186
+[; ;main.c: 211: return 1;
+"211
 [e ) -> -> 1 `i `uc ]
-[e $UE 1050  ]
-[; ;main.c: 187: }
-"187
-[e :UE 1050 ]
+[e $UE 1051  ]
+[; ;main.c: 212: }
+"212
+[e :UE 1051 ]
 }
-"189
+"214
 [v _UART_Write_String `(v ~T0 @X0 1 ef1`*Cuc ]
 {
-[; ;main.c: 189: void UART_Write_String(const char str[]) {
+[; ;main.c: 214: void UART_Write_String(const char str[]) {
 [e :U _UART_Write_String ]
 [v _str `*Cuc ~T0 @X0 1 r1 ]
 [f ]
-"190
+"215
 [v _arrayLength `i ~T0 @X0 1 a ]
-[; ;main.c: 190: int arrayLength = strlen(str);
+[; ;main.c: 215: int arrayLength = strlen(str);
 [e = _arrayLength -> ( _strlen (1 _str `i ]
-[; ;main.c: 191: for (int i = 0; i<arrayLength; i++) {
-"191
+[; ;main.c: 216: for (int i = 0; i<arrayLength; i++) {
+"216
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 1055  ]
-[e :U 1052 ]
-{
-"192
-[v _a `uc ~T0 @X0 1 a ]
-[; ;main.c: 192: char a = str[i];
-[e = _a *U + _str * -> _i `x -> -> # *U _str `i `x ]
-[; ;main.c: 193: UART_Write(a);
-"193
-[e ( _UART_Write (1 _a ]
-[; ;main.c: 194: if (a == '\r') {
-"194
-[e $ ! == -> _a `ui -> 13 `ui 1056  ]
-{
-[; ;main.c: 195: return;
-"195
-[e $UE 1051  ]
-"196
-}
-[e :U 1056 ]
-"197
-}
-"191
-[e ++ _i -> 1 `i ]
-[e :U 1055 ]
-[e $ < _i _arrayLength 1052  ]
+[e $U 1056  ]
 [e :U 1053 ]
-"197
+{
+"217
+[v _a `uc ~T0 @X0 1 a ]
+[; ;main.c: 217: char a = str[i];
+[e = _a *U + _str * -> _i `x -> -> # *U _str `i `x ]
+[; ;main.c: 218: UART_Write(a);
+"218
+[e ( _UART_Write (1 _a ]
+[; ;main.c: 219: if (a == '\r') {
+"219
+[e $ ! == -> _a `ui -> 13 `ui 1057  ]
+{
+[; ;main.c: 220: return;
+"220
+[e $UE 1052  ]
+"221
 }
-[; ;main.c: 196: }
-[; ;main.c: 197: }
-[; ;main.c: 198: }
-"198
-[e :UE 1051 ]
+[e :U 1057 ]
+"222
 }
-"200
+"216
+[e ++ _i -> 1 `i ]
+[e :U 1056 ]
+[e $ < _i _arrayLength 1053  ]
+[e :U 1054 ]
+"222
+}
+[; ;main.c: 221: }
+[; ;main.c: 222: }
+[; ;main.c: 223: }
+"223
+[e :UE 1052 ]
+}
+"225
 [v _UART_Write `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;main.c: 200: void UART_Write(char data){
+[; ;main.c: 225: void UART_Write(char data){
 [e :U _UART_Write ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 201: while(!TRMT);
-"201
-[e $U 1058  ]
-[e :U 1059 ]
-[e :U 1058 ]
-[e $ ! _TRMT 1059  ]
+[; ;main.c: 226: while(!TRMT);
+"226
+[e $U 1059  ]
 [e :U 1060 ]
-[; ;main.c: 202: TXREG = data;
-"202
+[e :U 1059 ]
+[e $ ! _TRMT 1060  ]
+[e :U 1061 ]
+[; ;main.c: 227: TXREG = data;
+"227
 [e = _TXREG _data ]
-[; ;main.c: 203: }
-"203
-[e :UE 1057 ]
+[; ;main.c: 228: }
+"228
+[e :UE 1058 ]
 }
-"208
+"233
 [v _FillServoPositionString `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 208: void FillServoPositionString() {
+[; ;main.c: 233: void FillServoPositionString() {
 [e :U _FillServoPositionString ]
 [f ]
-[; ;main.c: 209: EmptyMovementString();
-"209
-[e ( _EmptyMovementString ..  ]
-"210
-[v _tmp `uc ~T0 @X0 -> 5 `i a ]
-"211
-[v _i `ui ~T0 @X0 1 a ]
-[; ;main.c: 210: char tmp[5];
-[; ;main.c: 211: unsigned int i = 0;
-[e = _i -> -> 0 `i `ui ]
-[; ;main.c: 212: for(i = 0; i < SERVOSETS; i++){
-"212
-{
-[e = _i -> -> 0 `i `ui ]
-[e $ < _i _SERVOSETS 1062  ]
-[e $U 1063  ]
-[e :U 1062 ]
-{
-[; ;main.c: 213: strcat(movementString, "#");
-"213
-[e ( _strcat (2 , &U _movementString :s 1C ]
-[; ;main.c: 214: strcat(movementString, servosets[i].horizontalServo);
-"214
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 1 `*Cuc ]
-[; ;main.c: 215: strcat(movementString, "P");
-"215
-[e ( _strcat (2 , &U _movementString :s 2C ]
-"216
-[v _deltaHorizontal `i ~T0 @X0 1 a ]
-[; ;main.c: 216: int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal;
-[e = _deltaHorizontal * *U + &U . _positions 1 * -> . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 `ux -> -> # *U &U . _positions 1 `ui `ux . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 7 ]
-"217
-[v _newHorizontalPosition `i ~T0 @X0 1 a ]
-[; ;main.c: 217: int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
-[e = _newHorizontalPosition + . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 4 _deltaHorizontal ]
-[; ;main.c: 218: sprintf(tmp, "%d", newHorizontalPosition);
-"218
-[e ( _sprintf (1 , (. , &U _tmp :s 3C _newHorizontalPosition ]
-[; ;main.c: 219: strcat(movementString, tmp);
-"219
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-[; ;main.c: 220: strcat(movementString, "#");
-"220
-[e ( _strcat (2 , &U _movementString :s 4C ]
-[; ;main.c: 221: strcat(movementString, servosets[i].upperVerticalServo);
-"221
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 2 `*Cuc ]
-[; ;main.c: 222: strcat(movementString, "P");
-"222
-[e ( _strcat (2 , &U _movementString :s 5C ]
-"223
-[v _deltaVertical `i ~T0 @X0 1 a ]
-[; ;main.c: 223: int deltaVertical = positions.verticalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierVertical;
-[e = _deltaVertical * *U + &U . _positions 0 * -> . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 `ux -> -> # *U &U . _positions 0 `ui `ux . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 8 ]
-"224
-[v _newVerticalPosition `i ~T0 @X0 1 a ]
-[; ;main.c: 224: int newVerticalPosition = servosets[i].verticalUpperMediumPosition + deltaVertical;
-[e = _newVerticalPosition + . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 5 _deltaVertical ]
-[; ;main.c: 225: sprintf(tmp, "%d", newVerticalPosition);
-"225
-[e ( _sprintf (1 , (. , &U _tmp :s 6C _newVerticalPosition ]
-[; ;main.c: 226: strcat(movementString, tmp);
-"226
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-[; ;main.c: 227: strcat(movementString, "#");
-"227
-[e ( _strcat (2 , &U _movementString :s 7C ]
-[; ;main.c: 228: strcat(movementString, servosets[i].lowerVerticalServo);
-"228
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 3 `*Cuc ]
-[; ;main.c: 229: strcat(movementString, "P");
-"229
-[e ( _strcat (2 , &U _movementString :s 8C ]
-[; ;main.c: 230: sprintf(tmp, "%d", servosets[i].verticalLowerMediumPosition);
-"230
-[e ( _sprintf (1 , (. , &U _tmp :s 9C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 6 ]
-[; ;main.c: 231: strcat(movementString, tmp);
-"231
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-"232
-}
-"212
-[e ++ _i -> -> 1 `i `ui ]
-[e $ < _i _SERVOSETS 1062  ]
-[e :U 1063 ]
-"232
-}
-[; ;main.c: 232: }
-[; ;main.c: 233: strcat(movementString, "T400\r");
-"233
-[e ( _strcat (2 , &U _movementString :s 10C ]
-[; ;main.c: 234: }
+[; ;main.c: 234: EmptyMovementString();
 "234
-[e :UE 1061 ]
+[e ( _EmptyMovementString ..  ]
+"235
+[v _tmp `uc ~T0 @X0 -> 5 `i a ]
+"236
+[v _i `ui ~T0 @X0 1 a ]
+[; ;main.c: 235: char tmp[5];
+[; ;main.c: 236: unsigned int i = 0;
+[e = _i -> -> 0 `i `ui ]
+[; ;main.c: 237: for(i = 0; i < 6; i++){
+"237
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 1063  ]
+[e $U 1064  ]
+[e :U 1063 ]
+{
+[; ;main.c: 238: strcat(movementString, "#");
+"238
+[e ( _strcat (2 , &U _movementString :s 1C ]
+[; ;main.c: 239: strcat(movementString, servosets[i].horizontalServo);
+"239
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 1 `*Cuc ]
+[; ;main.c: 240: strcat(movementString, "P");
+"240
+[e ( _strcat (2 , &U _movementString :s 2C ]
+"241
+[v _deltaHorizontal `i ~T0 @X0 1 a ]
+[; ;main.c: 241: int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * currentDirection[i];
+[e = _deltaHorizontal * * *U + &U . _positions 1 * -> . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 `ux -> -> # *U &U . _positions 1 `ui `ux . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 7 *U + _currentDirection * -> _i `ux -> -> # *U _currentDirection `ui `ux ]
+"242
+[v _newHorizontalPosition `i ~T0 @X0 1 a ]
+[; ;main.c: 242: int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
+[e = _newHorizontalPosition + . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 4 _deltaHorizontal ]
+[; ;main.c: 243: sprintf(tmp, "%d", newHorizontalPosition);
+"243
+[e ( _sprintf (1 , (. , &U _tmp :s 3C _newHorizontalPosition ]
+[; ;main.c: 244: strcat(movementString, tmp);
+"244
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+[; ;main.c: 245: strcat(movementString, "#");
+"245
+[e ( _strcat (2 , &U _movementString :s 4C ]
+[; ;main.c: 246: strcat(movementString, servosets[i].upperVerticalServo);
+"246
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 2 `*Cuc ]
+[; ;main.c: 247: strcat(movementString, "P");
+"247
+[e ( _strcat (2 , &U _movementString :s 5C ]
+"248
+[v _deltaVertical `i ~T0 @X0 1 a ]
+[; ;main.c: 248: int deltaVertical = positions.verticalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierVertical;
+[e = _deltaVertical * *U + &U . _positions 0 * -> . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 `ux -> -> # *U &U . _positions 0 `ui `ux . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 8 ]
+"249
+[v _newVerticalPosition `i ~T0 @X0 1 a ]
+[; ;main.c: 249: int newVerticalPosition = servosets[i].verticalUpperMediumPosition + deltaVertical;
+[e = _newVerticalPosition + . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 5 _deltaVertical ]
+[; ;main.c: 250: sprintf(tmp, "%d", newVerticalPosition);
+"250
+[e ( _sprintf (1 , (. , &U _tmp :s 6C _newVerticalPosition ]
+[; ;main.c: 251: strcat(movementString, tmp);
+"251
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+[; ;main.c: 252: strcat(movementString, "#");
+"252
+[e ( _strcat (2 , &U _movementString :s 7C ]
+[; ;main.c: 253: strcat(movementString, servosets[i].lowerVerticalServo);
+"253
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 3 `*Cuc ]
+[; ;main.c: 254: strcat(movementString, "P");
+"254
+[e ( _strcat (2 , &U _movementString :s 8C ]
+[; ;main.c: 255: sprintf(tmp, "%d", servosets[i].verticalLowerMediumPosition);
+"255
+[e ( _sprintf (1 , (. , &U _tmp :s 9C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 6 ]
+[; ;main.c: 256: strcat(movementString, tmp);
+"256
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+"257
 }
 "237
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 1063  ]
+[e :U 1064 ]
+"257
+}
+[; ;main.c: 257: }
+[; ;main.c: 258: strcat(movementString, "T400\r");
+"258
+[e ( _strcat (2 , &U _movementString :s 10C ]
+[; ;main.c: 259: }
+"259
+[e :UE 1062 ]
+}
+"262
 [v _EmptyMovementString `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 237: void EmptyMovementString() {
+[; ;main.c: 262: void EmptyMovementString() {
 [e :U _EmptyMovementString ]
 [f ]
-[; ;main.c: 238: memset(&movementString[0], 0, sizeof(movementString));
-"238
-[e ( _memset (3 , , -> &U *U + &U _movementString * -> -> -> 0 `i `ui `ux -> -> # *U &U _movementString `ui `ux `*v -> 0 `i -> # _movementString `ui ]
-[; ;main.c: 239: }
-"239
-[e :UE 1065 ]
-}
-"241
-[v _InitServos `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 241: void InitServos() {
-[e :U _InitServos ]
-[f ]
-"242
-[v _tmp `uc ~T0 @X0 -> 5 `i a ]
-"243
-[v _i `ui ~T0 @X0 1 a ]
-[; ;main.c: 242: char tmp[5];
-[; ;main.c: 243: unsigned int i = 0;
-[e = _i -> -> 0 `i `ui ]
-[; ;main.c: 244: for(i = 0; i < SERVOSETS; i++){
-"244
-{
-[e = _i -> -> 0 `i `ui ]
-[e $ < _i _SERVOSETS 1067  ]
-[e $U 1068  ]
-[e :U 1067 ]
-{
-[; ;main.c: 245: EmptyMovementString();
-"245
-[e ( _EmptyMovementString ..  ]
-[; ;main.c: 246: strcat(movementString, "#");
-"246
-[e ( _strcat (2 , &U _movementString :s 11C ]
-[; ;main.c: 247: strcat(movementString, servosets[i].horizontalServo);
-"247
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 1 `*Cuc ]
-[; ;main.c: 248: strcat(movementString, "P");
-"248
-[e ( _strcat (2 , &U _movementString :s 12C ]
-[; ;main.c: 249: sprintf(tmp, "%d", servosets[i].horizontalMediumPosition);
-"249
-[e ( _sprintf (1 , (. , &U _tmp :s 13C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 4 ]
-[; ;main.c: 250: strcat(movementString, tmp);
-"250
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-[; ;main.c: 251: strcat(movementString, "\r");
-"251
-[e ( _strcat (2 , &U _movementString :s 14C ]
-[; ;main.c: 252: UART_Write_String(movementString);
-"252
-[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
-[; ;main.c: 253: EmptyMovementString();
-"253
-[e ( _EmptyMovementString ..  ]
-[; ;main.c: 254: strcat(movementString, "#");
-"254
-[e ( _strcat (2 , &U _movementString :s 15C ]
-[; ;main.c: 255: strcat(movementString, servosets[i].upperVerticalServo);
-"255
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 2 `*Cuc ]
-[; ;main.c: 256: strcat(movementString, "P");
-"256
-[e ( _strcat (2 , &U _movementString :s 16C ]
-[; ;main.c: 257: sprintf(tmp, "%d", servosets[i].verticalUpperMediumPosition);
-"257
-[e ( _sprintf (1 , (. , &U _tmp :s 17C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 5 ]
-[; ;main.c: 258: strcat(movementString, tmp);
-"258
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-[; ;main.c: 259: strcat(movementString, "\r");
-"259
-[e ( _strcat (2 , &U _movementString :s 18C ]
-[; ;main.c: 260: UART_Write_String(movementString);
-"260
-[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
-[; ;main.c: 261: EmptyMovementString();
-"261
-[e ( _EmptyMovementString ..  ]
-[; ;main.c: 262: strcat(movementString, "#");
-"262
-[e ( _strcat (2 , &U _movementString :s 19C ]
-[; ;main.c: 263: strcat(movementString, servosets[i].lowerVerticalServo);
+[; ;main.c: 263: memset(&movementString[0], 0, sizeof(movementString));
 "263
-[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 3 `*Cuc ]
-[; ;main.c: 264: strcat(movementString, "P");
+[e ( _memset (3 , , -> &U *U + &U _movementString * -> -> -> 0 `i `ui `ux -> -> # *U &U _movementString `ui `ux `*v -> 0 `i -> # _movementString `ui ]
+[; ;main.c: 264: }
 "264
-[e ( _strcat (2 , &U _movementString :s 20C ]
-[; ;main.c: 265: sprintf(tmp, "%d", servosets[i].verticalLowerMediumPosition);
-"265
-[e ( _sprintf (1 , (. , &U _tmp :s 21C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 6 ]
-[; ;main.c: 266: strcat(movementString, tmp);
-"266
-[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
-[; ;main.c: 267: strcat(movementString, "\r");
-"267
-[e ( _strcat (2 , &U _movementString :s 22C ]
-[; ;main.c: 268: UART_Write_String(movementString);
-"268
-[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
-"269
-}
-"244
-[e ++ _i -> -> 1 `i `ui ]
-[e $ < _i _SERVOSETS 1067  ]
-[e :U 1068 ]
-"269
-}
-[; ;main.c: 269: }
-[; ;main.c: 270: }
-"270
 [e :UE 1066 ]
 }
+"266
+[v _InitServos `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 266: void InitServos() {
+[e :U _InitServos ]
+[f ]
+"267
+[v _tmp `uc ~T0 @X0 -> 5 `i a ]
+"268
+[v _i `ui ~T0 @X0 1 a ]
+[; ;main.c: 267: char tmp[5];
+[; ;main.c: 268: unsigned int i = 0;
+[e = _i -> -> 0 `i `ui ]
+[; ;main.c: 269: for(i = 0; i < 6; i++){
+"269
+{
+[e = _i -> -> 0 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 1068  ]
+[e $U 1069  ]
+[e :U 1068 ]
+{
+[; ;main.c: 270: EmptyMovementString();
+"270
+[e ( _EmptyMovementString ..  ]
+[; ;main.c: 271: strcat(movementString, "#");
+"271
+[e ( _strcat (2 , &U _movementString :s 11C ]
+[; ;main.c: 272: strcat(movementString, servosets[i].horizontalServo);
 "272
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 1 `*Cuc ]
+[; ;main.c: 273: strcat(movementString, "P");
+"273
+[e ( _strcat (2 , &U _movementString :s 12C ]
+[; ;main.c: 274: sprintf(tmp, "%d", servosets[i].horizontalMediumPosition);
+"274
+[e ( _sprintf (1 , (. , &U _tmp :s 13C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 4 ]
+[; ;main.c: 275: strcat(movementString, tmp);
+"275
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+[; ;main.c: 276: strcat(movementString, "\r");
+"276
+[e ( _strcat (2 , &U _movementString :s 14C ]
+[; ;main.c: 277: UART_Write_String(movementString);
+"277
+[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
+[; ;main.c: 278: EmptyMovementString();
+"278
+[e ( _EmptyMovementString ..  ]
+[; ;main.c: 279: strcat(movementString, "#");
+"279
+[e ( _strcat (2 , &U _movementString :s 15C ]
+[; ;main.c: 280: strcat(movementString, servosets[i].upperVerticalServo);
+"280
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 2 `*Cuc ]
+[; ;main.c: 281: strcat(movementString, "P");
+"281
+[e ( _strcat (2 , &U _movementString :s 16C ]
+[; ;main.c: 282: sprintf(tmp, "%d", servosets[i].verticalUpperMediumPosition);
+"282
+[e ( _sprintf (1 , (. , &U _tmp :s 17C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 5 ]
+[; ;main.c: 283: strcat(movementString, tmp);
+"283
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+[; ;main.c: 284: strcat(movementString, "\r");
+"284
+[e ( _strcat (2 , &U _movementString :s 18C ]
+[; ;main.c: 285: UART_Write_String(movementString);
+"285
+[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
+[; ;main.c: 286: EmptyMovementString();
+"286
+[e ( _EmptyMovementString ..  ]
+[; ;main.c: 287: strcat(movementString, "#");
+"287
+[e ( _strcat (2 , &U _movementString :s 19C ]
+[; ;main.c: 288: strcat(movementString, servosets[i].lowerVerticalServo);
+"288
+[e ( _strcat (2 , &U _movementString -> &U . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 3 `*Cuc ]
+[; ;main.c: 289: strcat(movementString, "P");
+"289
+[e ( _strcat (2 , &U _movementString :s 20C ]
+[; ;main.c: 290: sprintf(tmp, "%d", servosets[i].verticalLowerMediumPosition);
+"290
+[e ( _sprintf (1 , (. , &U _tmp :s 21C . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 6 ]
+[; ;main.c: 291: strcat(movementString, tmp);
+"291
+[e ( _strcat (2 , &U _movementString -> &U _tmp `*Cuc ]
+[; ;main.c: 292: strcat(movementString, "\r");
+"292
+[e ( _strcat (2 , &U _movementString :s 22C ]
+[; ;main.c: 293: UART_Write_String(movementString);
+"293
+[e ( _UART_Write_String (1 -> &U _movementString `*Cuc ]
+"294
+}
+"269
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 1068  ]
+[e :U 1069 ]
+"294
+}
+[; ;main.c: 294: }
+[; ;main.c: 295: }
+"295
+[e :UE 1067 ]
+}
+"297
 [v _RotatePositions `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 272: void RotatePositions() {
+[; ;main.c: 297: void RotatePositions() {
 [e :U _RotatePositions ]
 [f ]
-[; ;main.c: 273: for (unsigned int i = 0; i < SERVOSETS; i++) {
-"273
+[; ;main.c: 298: for (unsigned int i = 0; i < 6; i++) {
+"298
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
-[e $ < _i _SERVOSETS 1071  ]
-[e $U 1072  ]
-[e :U 1071 ]
-{
-[; ;main.c: 274: if (servosets[i].currentServoPosition < (4 - 1)) {
-"274
-[e $ ! < . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> - -> 4 `i -> 1 `i `ui 1074  ]
-{
-[; ;main.c: 275: servosets[i].currentServoPosition += 1;
-"275
-[e =+ . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> -> 1 `i `ui ]
-"276
-}
-[; ;main.c: 276: } else {
-[e $U 1075  ]
-[e :U 1074 ]
-{
-[; ;main.c: 277: servosets[i].currentServoPosition = 0;
-"277
-[e = . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> -> 0 `i `ui ]
-"278
-}
-[e :U 1075 ]
-"280
-}
-"273
-[e ++ _i -> -> 1 `i `ui ]
-[e $ < _i _SERVOSETS 1071  ]
+[e $ < _i -> -> 6 `i `ui 1072  ]
+[e $U 1073  ]
 [e :U 1072 ]
-"280
+{
+[; ;main.c: 299: if (servosets[i].currentServoPosition < (4 - 1)) {
+"299
+[e $ ! < . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> - -> 4 `i -> 1 `i `ui 1075  ]
+{
+[; ;main.c: 300: servosets[i].currentServoPosition += 1;
+"300
+[e =+ . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> -> 1 `i `ui ]
+"301
 }
-[; ;main.c: 278: }
-[; ;main.c: 280: }
-[; ;main.c: 281: }
-"281
-[e :UE 1070 ]
+[; ;main.c: 301: } else {
+[e $U 1076  ]
+[e :U 1075 ]
+{
+[; ;main.c: 302: servosets[i].currentServoPosition = 0;
+"302
+[e = . *U + &U _servosets * -> _i `ux -> -> # *U &U _servosets `ui `ux 0 -> -> 0 `i `ui ]
+"303
+}
+[e :U 1076 ]
+"305
+}
+"298
+[e ++ _i -> -> 1 `i `ui ]
+[e $ < _i -> -> 6 `i `ui 1072  ]
+[e :U 1073 ]
+"305
+}
+[; ;main.c: 303: }
+[; ;main.c: 305: }
+[; ;main.c: 306: }
+"306
+[e :UE 1071 ]
 }
 [p f _sprintf 8388736 ]
 [a 3C 37 100 0 ]

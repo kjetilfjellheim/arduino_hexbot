@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/XC8_18F87K22/production\SimpleWalking.X.production.hex">
+  <executable name="dist/XC8_18F87K22/production\TurningIncluded.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>16384</length>
-      <used>3346</used>
-      <free>13038</free>
+      <used>3462</used>
+      <free>12922</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>768</length>
-      <used>469</used>
-      <free>299</free>
+      <used>476</used>
+      <free>292</free>
     </memory>
   </executable>
 </project>

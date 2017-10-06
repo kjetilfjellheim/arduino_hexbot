@@ -15013,9 +15013,7 @@ void ConfigureOscillator(void);
 # 13 "user.h"
 void InitApp(void);
 
-# 27 "main.c"
-const unsigned int SERVOSETS = 6;
-
+# 32 "main.c"
 char UART_Init();
 char UART_Data_Ready();
 char UART_Read();
@@ -15032,6 +15030,13 @@ int horizontalMovement[4];
 } Position;
 
 typedef struct {
+int right[6];
+int left[6];
+int forward[6];
+int backward[6];
+} Turn;
+
+typedef struct {
 unsigned int currentServoPosition;
 char horizontalServo[3];
 char upperVerticalServo[3];
@@ -15043,12 +15048,19 @@ int multiplierHorizontal;
 int multiplierVertical;
 } Servoset;
 
+const Turn turns = {
+{-1, -1, -1, 1, 1, 1},
+{1, 1, 1, -1, -1, -1},
+{1, 1, 1, 1, 1, 1},
+{-1, -1, -1, -1, -1, -1},
+};
+
 const Position positions = {
 {0, 0, 200, 0},
 {0, 200, 0, -200}
 };
 
-# 64
+# 81
 Servoset servosets[] = {
 {
 0,
@@ -15118,30 +15130,36 @@ Servoset servosets[] = {
 }
 };
 
-# 135
+# 152
 char movementString[256] = "";
+
+# 157
+int *currentDirection;
 
 void main(void) {
 
-# 142
+# 163
+currentDirection = turns.left;
+
+# 167
 ConfigureOscillator();
 
-# 146
+# 171
 UART_Init();
 
-# 150
+# 175
 InitServos();
 
-# 154
+# 179
 while (1) {
 
-# 158
+# 183
 FillServoPositionString();
 
-# 162
+# 187
 UART_Write_String(movementString);
 
-# 166
+# 191
 RotatePositions();
 
 }
@@ -15181,16 +15199,16 @@ while(!TRMT);
 TXREG = data;
 }
 
-# 208
+# 233
 void FillServoPositionString() {
 EmptyMovementString();
 char tmp[5];
 unsigned int i = 0;
-for(i = 0; i < SERVOSETS; i++){
+for(i = 0; i < 6; i++){
 strcat(movementString, "#");
 strcat(movementString, servosets[i].horizontalServo);
 strcat(movementString, "P");
-int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal;
+int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * currentDirection[i];
 int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
 sprintf(tmp, "%d", newHorizontalPosition);
 strcat(movementString, tmp);
@@ -15218,7 +15236,7 @@ memset(&movementString[0], 0, sizeof(movementString));
 void InitServos() {
 char tmp[5];
 unsigned int i = 0;
-for(i = 0; i < SERVOSETS; i++){
+for(i = 0; i < 6; i++){
 EmptyMovementString();
 strcat(movementString, "#");
 strcat(movementString, servosets[i].horizontalServo);
@@ -15247,7 +15265,7 @@ UART_Write_String(movementString);
 }
 
 void RotatePositions() {
-for (unsigned int i = 0; i < SERVOSETS; i++) {
+for (unsigned int i = 0; i < 6; i++) {
 if (servosets[i].currentServoPosition < (4 - 1)) {
 servosets[i].currentServoPosition += 1;
 } else {

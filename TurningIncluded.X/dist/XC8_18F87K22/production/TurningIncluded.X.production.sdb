@@ -3,24 +3,44 @@
 [d edition pro ]
 [d chip 18F2480 ]
 [d frameptr 4065 ]
+"42 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"32 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\cos.c
+[v _cos cos `(d  1 e 3 0 ]
 "492 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\floor.c
+[v _floor floor `(d  1 e 3 0 ]
+"254 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
 "86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
 "62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
 "20 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\sin.c
+[v _sin sin `(d  1 e 3 0 ]
 "10 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
@@ -41,25 +61,25 @@
 [v _high_isr high_isr `II(v  1 e 1 0 ]
 "67
 [v _low_isr low_isr `IIL(v  1 e 1 0 ]
-"159 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
+"154 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"197
+"192
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
-"214
+"209
 [v _UART_Write_String UART_Write_String `(v  1 e 1 0 ]
-"225
+"220
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"233
+"228
 [v _FillServoPositionString FillServoPositionString `(v  1 e 1 0 ]
-"262
+"257
 [v _EmptyMovementString EmptyMovementString `(v  1 e 1 0 ]
-"266
+"261
 [v _InitServos InitServos `(v  1 e 1 0 ]
-"297
+"292
 [v _RotatePositions RotatePositions `(v  1 e 1 0 ]
 "23 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 1 0 ]
-[s S226 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S236 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -69,7 +89,7 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "26907 C:\Program Files (x86)\Microchip\xc8\v1.44\include\pic18f2480.h
-[s S235 . 1 `uc 1 RC0 1 0 :1:0 
+[s S245 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -78,15 +98,15 @@
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S244 . 1 `S226 1 . 1 0 `S235 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES244  1 e 1 @3988 ]
-[s S407 . 1 `uc 1 TUN 1 0 :5:0 
+[u S254 . 1 `S236 1 . 1 0 `S245 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES254  1 e 1 @3988 ]
+[s S420 . 1 `uc 1 TUN 1 0 :5:0 
 `uc 1 . 1 0 :1:5 
 `uc 1 PLLEN 1 0 :1:6 
 `uc 1 INTSRC 1 0 :1:7 
 ]
 "27119
-[s S412 . 1 `uc 1 TUN0 1 0 :1:0 
+[s S425 . 1 `uc 1 TUN0 1 0 :1:0 
 `uc 1 TUN1 1 0 :1:1 
 `uc 1 TUN2 1 0 :1:2 
 `uc 1 TUN3 1 0 :1:3 
@@ -94,9 +114,9 @@
 `uc 1 . 1 0 :2:5 
 `uc 1 INTSCR 1 0 :1:7 
 ]
-[u S420 . 1 `S407 1 . 1 0 `S412 1 . 1 0 ]
-[v _OSCTUNEbits OSCTUNEbits `VES420  1 e 1 @3995 ]
-[s S172 . 1 `uc 1 RX9D 1 0 :1:0 
+[u S433 . 1 `S420 1 . 1 0 `S425 1 . 1 0 ]
+[v _OSCTUNEbits OSCTUNEbits `VES433  1 e 1 @3995 ]
+[s S182 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -106,23 +126,23 @@
 `uc 1 SPEN 1 0 :1:7 
 ]
 "27989
-[s S181 . 1 `uc 1 . 1 0 :3:0 
+[s S191 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 ADEN 1 0 :1:3 
 ]
-[s S184 . 1 `uc 1 . 1 0 :5:0 
+[s S194 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 SRENA 1 0 :1:5 
 ]
-[s S187 . 1 `uc 1 . 1 0 :6:0 
+[s S197 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC8_9 1 0 :1:6 
 ]
-[s S190 . 1 `uc 1 . 1 0 :6:0 
+[s S200 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 RC9 1 0 :1:6 
 ]
-[s S193 . 1 `uc 1 RCD8 1 0 :1:0 
+[s S203 . 1 `uc 1 RCD8 1 0 :1:0 
 ]
-[u S195 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S184 1 . 1 0 `S187 1 . 1 0 `S190 1 . 1 0 `S193 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES195  1 e 1 @4011 ]
-[s S118 . 1 `uc 1 TX9D 1 0 :1:0 
+[u S205 . 1 `S182 1 . 1 0 `S191 1 . 1 0 `S194 1 . 1 0 `S197 1 . 1 0 `S200 1 . 1 0 `S203 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES205  1 e 1 @4011 ]
+[s S128 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -132,7 +152,7 @@
 `uc 1 CSRC 1 0 :1:7 
 ]
 "28197
-[s S127 . 1 `uc 1 TX9D1 1 0 :1:0 
+[s S137 . 1 `uc 1 TX9D1 1 0 :1:0 
 `uc 1 TRMT1 1 0 :1:1 
 `uc 1 BRGH1 1 0 :1:2 
 `uc 1 SENDB1 1 0 :1:3 
@@ -141,20 +161,20 @@
 `uc 1 TX91 1 0 :1:6 
 `uc 1 CSRC1 1 0 :1:7 
 ]
-[s S136 . 1 `uc 1 . 1 0 :6:0 
+[s S146 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TX8_9 1 0 :1:6 
 ]
-[s S139 . 1 `uc 1 TXD8 1 0 :1:0 
+[s S149 . 1 `uc 1 TXD8 1 0 :1:0 
 ]
-[u S141 . 1 `S118 1 . 1 0 `S127 1 . 1 0 `S136 1 . 1 0 `S139 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES141  1 e 1 @4012 ]
+[u S151 . 1 `S128 1 . 1 0 `S137 1 . 1 0 `S146 1 . 1 0 `S149 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES151  1 e 1 @4012 ]
 "28414
 [v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "28438
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "28450
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @4016 ]
-[s S76 . 1 `uc 1 ABDEN 1 0 :1:0 
+[s S86 . 1 `uc 1 ABDEN 1 0 :1:0 
 `uc 1 WUE 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 BRG16 1 0 :1:3 
@@ -164,89 +184,189 @@
 `uc 1 ABDOVF 1 0 :1:7 
 ]
 "28660
-[s S85 . 1 `uc 1 . 1 0 :4:0 
+[s S95 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 SCKP 1 0 :1:4 
 ]
-[s S88 . 1 `uc 1 . 1 0 :5:0 
+[s S98 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RXCKP 1 0 :1:5 
 ]
-[s S91 . 1 `uc 1 . 1 0 :1:0 
+[s S101 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 W4E 1 0 :1:1 
 ]
-[u S94 . 1 `S76 1 . 1 0 `S85 1 . 1 0 `S88 1 . 1 0 `S91 1 . 1 0 ]
-[v _BAUDCONbits BAUDCONbits `VES94  1 e 1 @4024 ]
-[s S437 . 1 `uc 1 SCS 1 0 :2:0 
+[u S104 . 1 `S86 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 `S101 1 . 1 0 ]
+[v _BAUDCONbits BAUDCONbits `VES104  1 e 1 @4024 ]
+[s S450 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 IOFS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 `uc 1 IDLEN 1 0 :1:7 
 ]
 "30341
-[s S443 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S456 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S450 . 1 `S437 1 . 1 0 `S443 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES450  1 e 1 @4051 ]
-"35508
+[u S463 . 1 `S450 1 . 1 0 `S456 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES463  1 e 1 @4051 ]
 "35508
 [v _TRMT TRMT `VEb  1 e 0 @32097 ]
 "354 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\doprnt.c
 [v _dpowers dpowers `C[5]ui  1 s 10 dpowers ]
-[s S33 . 48 `[6]i 1 right 12 0 `[6]i 1 left 12 12 `[6]i 1 forward 12 24 `[6]i 1 backward 12 36 ]
-"66 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
-[v _turns turns `CS33  1 e 48 0 ]
-[s S38 . 16 `[4]i 1 verticalMovement 8 0 `[4]i 1 horizontalMovement 8 8 ]
-"73
-[v _positions positions `CS38  1 e 16 0 ]
-[s S41 . 21 `ui 1 currentServoPosition 2 0 `[3]uc 1 horizontalServo 3 2 `[3]uc 1 upperVerticalServo 3 5 `[3]uc 1 lowerVerticalServo 3 8 `i 1 horizontalMediumPosition 2 11 `i 1 verticalUpperMediumPosition 2 13 `i 1 verticalLowerMediumPosition 2 15 `i 1 multiplierHorizontal 2 17 `i 1 multiplierVertical 2 19 ]
-"81
-[v _servosets servosets `[6]S41  1 e 126 0 ]
-"152
+[s S33 . 36 `[6]f 1 leftRight 18 0 `[6]f 1 forwardBack 18 18 ]
+"65 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
+[v _turns turns `CS33  1 e 36 0 ]
+[s S36 . 16 `[4]i 1 verticalMovement 8 0 `[4]i 1 horizontalMovement 8 8 ]
+"70
+[v _positions positions `CS36  1 e 16 0 ]
+[s S39 . 21 `ui 1 currentServoPosition 2 0 `[3]uc 1 horizontalServo 3 2 `[3]uc 1 upperVerticalServo 3 5 `[3]uc 1 lowerVerticalServo 3 8 `i 1 horizontalMediumPosition 2 11 `i 1 verticalUpperMediumPosition 2 13 `i 1 verticalLowerMediumPosition 2 15 `i 1 multiplierHorizontal 2 17 `i 1 multiplierVertical 2 19 ]
+"78
+[v _servosets servosets `[6]S39  1 e 126 0 ]
+"149
 [v _movementString movementString `[256]uc  1 e 256 0 ]
-"157
-[v _currentDirection currentDirection `*.25i  1 e 2 0 ]
-"159
+"151
+[v _forwardSpeed forwardSpeed `f  1 e 3 0 ]
+"152
+[v _rotation rotation `f  1 e 3 0 ]
+"154
 [v _main main `(v  1 e 1 0 ]
 {
-"195
+"157
+[v main@left left `f  1 a 3 86 ]
+"156
+[v main@forward forward `f  1 a 3 83 ]
+"190
 } 0
-"197
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\cos.c
+[v _cos cos `(d  1 e 3 0 ]
+{
+[v cos@f f `d  1 p 3 77 ]
+"24
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\sin.c
+[v _sin sin `(d  1 e 3 0 ]
+{
+"30
+[v sin@x2 x2 `d  1 a 3 73 ]
+[v sin@y y `d  1 a 3 67 ]
+"31
+[v sin@sgn sgn `uc  1 a 1 76 ]
+"13
+[v sin@f f `d  1 p 3 64 ]
+"15
+[v sin@coeff_a coeff_a `C[5]d  1 s 15 coeff_a ]
+"23
+[v sin@coeff_b coeff_b `C[4]d  1 s 12 coeff_b ]
+"57
+} 0
+"13 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\floor.c
+[v _floor floor `(d  1 e 3 0 ]
+{
+"15
+[v floor@i i `d  1 a 3 53 ]
+"16
+[v floor@expon expon `i  1 a 2 56 ]
+"13
+[v floor@x x `d  1 p 3 50 ]
+"30
+} 0
+"254 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+{
+[v frexp@value value `d  1 p 3 39 ]
+[v frexp@eptr eptr `*.39i  1 p 2 42 ]
+"274
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 39 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 42 ]
+"13
+} 0
+"42 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+{
+"44
+[v ___altoft@sign sign `uc  1 a 1 52 ]
+[v ___altoft@exp exp `uc  1 a 1 51 ]
+"42
+[v ___altoft@c c `l  1 p 4 42 ]
+"57
+} 0
+"4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+{
+"6
+[v eval_poly@res res `d  1 a 3 34 ]
+"4
+[v eval_poly@x x `d  1 p 3 27 ]
+[v eval_poly@d d `*.25Cd  1 p 2 30 ]
+[v eval_poly@n n `i  1 p 2 32 ]
+"12
+} 0
+"20 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 58 ]
+[v ___ftsub@f2 f2 `f  1 p 3 61 ]
+"27
+} 0
+"15 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 39 ]
+"20
+} 0
+"54 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 47 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 51 ]
+[v ___ftdiv@exp exp `uc  1 a 1 50 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 46 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 37 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 40 ]
+"86
+} 0
+"192 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _UART_Init UART_Init `(uc  1 e 1 0 ]
 {
-"212
+"207
 } 0
-"297
+"292
 [v _RotatePositions RotatePositions `(v  1 e 1 0 ]
 {
-"298
+"293
 [v RotatePositions@i i `ui  1 a 2 47 ]
-"306
+"301
 } 0
-"266
+"261
 [v _InitServos InitServos `(v  1 e 1 0 ]
 {
-"267
+"262
 [v InitServos@tmp tmp `[5]uc  1 a 5 13 ]
-"268
+"263
 [v InitServos@i i `ui  1 a 2 18 ]
-"295
+"290
 } 0
-"214
+"209
 [v _UART_Write_String UART_Write_String `(v  1 e 1 0 ]
 {
-"217
+"212
 [v UART_Write_String@a a `uc  1 a 1 52 ]
-"216
+"211
 [v UART_Write_String@i i `i  1 a 2 50 ]
-"215
+"210
 [v UART_Write_String@arrayLength arrayLength `i  1 a 2 48 ]
-"214
+"209
 [v UART_Write_String@str str `*.39Cuc  1 p 2 45 ]
-"223
+"218
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\strlen.c
 [v _strlen strlen `(ui  1 e 2 0 ]
@@ -257,30 +377,33 @@
 [v strlen@s s `*.39Cuc  1 p 2 39 ]
 "13
 } 0
-"225 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
+"220 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
 {
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 wreg ]
 [v UART_Write@data data `uc  1 a 1 39 ]
-"228
+"223
 } 0
-"233
+"228
 [v _FillServoPositionString FillServoPositionString `(v  1 e 1 0 ]
 {
-"249
-[v FillServoPositionString@newVerticalPosition newVerticalPosition `i  1 a 2 23 ]
-"248
-[v FillServoPositionString@deltaVertical deltaVertical `i  1 a 2 21 ]
-"242
-[v FillServoPositionString@newHorizontalPosition newHorizontalPosition `i  1 a 2 19 ]
-"241
-[v FillServoPositionString@deltaHorizontal deltaHorizontal `i  1 a 2 17 ]
-"235
-[v FillServoPositionString@tmp tmp `[5]uc  1 a 5 27 ]
+"244
+[v FillServoPositionString@newVerticalPosition newVerticalPosition `i  1 a 2 65 ]
+"243
+[v FillServoPositionString@deltaVertical deltaVertical `i  1 a 2 63 ]
+"237
+[v FillServoPositionString@newHorizontalPosition newHorizontalPosition `i  1 a 2 61 ]
 "236
-[v FillServoPositionString@i i `ui  1 a 2 36 ]
-"259
+[v FillServoPositionString@deltaHorizontal deltaHorizontal `i  1 a 2 59 ]
+"230
+[v FillServoPositionString@tmp tmp `[5]uc  1 a 5 71 ]
+"231
+[v FillServoPositionString@i i `ui  1 a 2 80 ]
+"228
+[v FillServoPositionString@forward forward `f  1 p 3 42 ]
+[v FillServoPositionString@left left `f  1 p 3 45 ]
+"254
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\strcat.c
 [v _strcat strcat `(*.39uc  1 e 2 0 ]
@@ -342,10 +465,65 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 41 ]
 "53
 } 0
-"262 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
+"44 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 37 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 41 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 36 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 27 ]
+"73
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 10 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 14 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 13 ]
+[v ___ftmul@exp exp `uc  1 a 1 9 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 0 ]
+[v ___ftmul@f2 f2 `f  1 p 3 3 ]
+"157
+} 0
+"86 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 26 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 25 ]
+[v ___ftadd@sign sign `uc  1 a 1 24 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 15 ]
+[v ___ftadd@f2 f2 `f  1 p 3 18 ]
+"148
+} 0
+"32 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 50 ]
+"32
+[v ___awtoft@c c `i  1 p 2 47 ]
+"42
+} 0
+"62 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 39 ]
+[v ___ftpack@exp exp `uc  1 p 1 42 ]
+[v ___ftpack@sign sign `uc  1 p 1 43 ]
+"86
+} 0
+"257 D:\code\githubrepos\arduino_hexbot\TurningIncluded.X\main.c
 [v _EmptyMovementString EmptyMovementString `(v  1 e 1 0 ]
 {
-"264
+"259
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.44\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 2 0 ]

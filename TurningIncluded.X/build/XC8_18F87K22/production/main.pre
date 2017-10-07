@@ -14819,6 +14819,34 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
+# 30 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\math.h"
+extern double fabs(double);
+extern double floor(double);
+extern double ceil(double);
+extern double modf(double, double *);
+extern double sqrt(double);
+extern double atof(const char *);
+extern double sin(double) ;
+extern double cos(double) ;
+extern double tan(double) ;
+extern double asin(double) ;
+extern double acos(double) ;
+extern double atan(double);
+extern double atan2(double, double) ;
+extern double log(double);
+extern double log10(double);
+extern double pow(double, double) ;
+extern double exp(double) ;
+extern double sinh(double) ;
+extern double cosh(double) ;
+extern double tanh(double);
+extern double eval_poly(double, const double *, int);
+extern double frexp(double, int *);
+extern double ldexp(double, int);
+extern double fmod(double, double);
+extern double trunc(double);
+extern double round(double);
+
 # 4 "C:\Program Files (x86)\Microchip\xc8\v1.44\include\__size_t.h"
 typedef unsigned size_t;
 
@@ -15013,13 +15041,13 @@ void ConfigureOscillator(void);
 # 13 "user.h"
 void InitApp(void);
 
-# 32 "main.c"
+# 33 "main.c"
 char UART_Init();
 char UART_Data_Ready();
 char UART_Read();
 void UART_Write(char data);
 void UART_Write_String(const char str[]);
-void FillServoPositionString();
+void FillServoPositionString(float forward, float left);
 void EmptyMovementString();
 void InitServos();
 void RotatePositions();
@@ -15030,10 +15058,8 @@ int horizontalMovement[4];
 } Position;
 
 typedef struct {
-int right[6];
-int left[6];
-int forward[6];
-int backward[6];
+float leftRight[6];
+float forwardBack[6];
 } Turn;
 
 typedef struct {
@@ -15050,9 +15076,7 @@ int multiplierVertical;
 
 const Turn turns = {
 {-1, -1, -1, 1, 1, 1},
-{1, 1, 1, -1, -1, -1},
-{1, 1, 1, 1, 1, 1},
-{-1, -1, -1, -1, -1, -1},
+{1, 1, 1, 1, 1, 1}
 };
 
 const Position positions = {
@@ -15060,7 +15084,7 @@ const Position positions = {
 {0, 200, 0, -200}
 };
 
-# 81
+# 78
 Servoset servosets[] = {
 {
 0,
@@ -15130,36 +15154,36 @@ Servoset servosets[] = {
 }
 };
 
-# 152
+# 149
 char movementString[256] = "";
 
-# 157
-int *currentDirection;
+float forwardSpeed = 1;
+float rotation = 0.785398163;
 
 void main(void) {
 
-# 163
-currentDirection = turns.left;
+float forward = cos(rotation) * forwardSpeed;
+float left = sin(rotation) * forwardSpeed;;
 
-# 167
+# 162
 ConfigureOscillator();
 
-# 171
+# 166
 UART_Init();
 
-# 175
+# 170
 InitServos();
 
-# 179
+# 174
 while (1) {
 
-# 183
-FillServoPositionString();
+# 178
+FillServoPositionString(forward, left);
 
-# 187
+# 182
 UART_Write_String(movementString);
 
-# 191
+# 186
 RotatePositions();
 
 }
@@ -15199,8 +15223,8 @@ while(!TRMT);
 TXREG = data;
 }
 
-# 233
-void FillServoPositionString() {
+# 228
+void FillServoPositionString(float forward, float left) {
 EmptyMovementString();
 char tmp[5];
 unsigned int i = 0;
@@ -15208,7 +15232,7 @@ for(i = 0; i < 6; i++){
 strcat(movementString, "#");
 strcat(movementString, servosets[i].horizontalServo);
 strcat(movementString, "P");
-int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * currentDirection[i];
+int deltaHorizontal = (positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * forward * 0.5) + (positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * left * turns.leftRight[i] * 0.5);
 int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
 sprintf(tmp, "%d", newHorizontalPosition);
 strcat(movementString, tmp);

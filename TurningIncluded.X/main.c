@@ -6,6 +6,7 @@
 
 #include <xc.h>        /* XC8 General Include File */
 
+#include <math.h>
 #include <stdio.h>
 #include <stdint.h>        /* For uint8_t definition */
 #include <stdbool.h>       /* For true/false definition */
@@ -34,7 +35,7 @@ char UART_Data_Ready();
 char UART_Read();
 void UART_Write(char data);
 void UART_Write_String(const char str[]);
-void FillServoPositionString();
+void FillServoPositionString(float forward, float left);
 void EmptyMovementString();
 void InitServos();
 void RotatePositions();
@@ -45,10 +46,8 @@ typedef struct {
 } Position;
 
 typedef struct {
-    int right[SERVOSETS];    
-    int left[SERVOSETS];
-    int forward[SERVOSETS];
-    int backward[SERVOSETS];
+    float leftRight[SERVOSETS];    
+    float forwardBack[SERVOSETS];    
 } Turn;
 
 typedef struct {
@@ -64,10 +63,8 @@ typedef struct {
 } Servoset;
 
 const Turn turns = {
-    {-1, -1, -1, 1, 1, 1},    
-    {1, 1, 1, -1, -1, -1},
-    {1, 1, 1, 1, 1, 1},
-    {-1, -1, -1, -1, -1, -1},
+    {-1, -1, -1, 1, 1, 1},
+    {1, 1, 1, 1, 1, 1}
  };
 
 const Position positions = {
@@ -151,16 +148,14 @@ const Position positions = {
  */
 char movementString[MAX_MOVEMENT_STRING_LENGTH] = "";
 
-/**
- * Direction (Forward, backward, left or right)
- */
-int *currentDirection;
+    float forwardSpeed = 1;
+    float rotation = 0.785398163;
 
 void main(void) {
-    /**
-     * Setting default values.
-     */
-    currentDirection = turns.left;
+
+    float forward = cos(rotation) * forwardSpeed;
+    float left =  sin(rotation) * forwardSpeed;;
+    
     /**
      * Configure oscillator registries.
      */
@@ -180,7 +175,7 @@ void main(void) {
         /**
          * Sets the inital servo positions.
          */
-        FillServoPositionString();
+        FillServoPositionString(forward, left);
         /**
          * Transmit positions.
          */
@@ -230,7 +225,7 @@ void UART_Write(char data){
 /**
  * Moves all servoes to init position.
  */
-void FillServoPositionString() {
+void FillServoPositionString(float forward, float left) {
     EmptyMovementString();
     char tmp[5];
     unsigned int i = 0;
@@ -238,7 +233,7 @@ void FillServoPositionString() {
         strcat(movementString, "#");
         strcat(movementString, servosets[i].horizontalServo);
         strcat(movementString, "P");
-        int deltaHorizontal = positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * currentDirection[i];
+        int deltaHorizontal = (positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * forward * 0.5) + (positions.horizontalMovement[servosets[i].currentServoPosition] * servosets[i].multiplierHorizontal * left * turns.leftRight[i] * 0.5);
         int newHorizontalPosition = servosets[i].horizontalMediumPosition + deltaHorizontal;
         sprintf(tmp, "%d", newHorizontalPosition);
         strcat(movementString, tmp);
